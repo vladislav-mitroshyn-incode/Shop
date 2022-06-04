@@ -8,6 +8,9 @@
 4) refactor: a commit of the type refactor change code but it don't change UI
 
 # Run App
+
 npm run dev - launch client and server
+
 Client - 3000 port
+
 Server - 3001 port
