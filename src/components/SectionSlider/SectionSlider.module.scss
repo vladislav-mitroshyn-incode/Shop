@@ -1,0 +1,63 @@
+@import '../../constants/colors.scss';
+
+%buttonOutlined{
+    padding: 15px 40px;
+    color: $ColorPrimary;
+    border: 1px solid $ColorPrimary;
+    border-radius: 4px;
+    background: none ;
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+%buttonPrimary{
+    padding: 15px 40px;
+    color: $ColorWhite;
+    border: 1px solid $ColorPrimary;
+    border-radius: 4px;
+    background: $ColorPrimary ;
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slider{
+    background: url('../../assets/slider/bg.png') center;
+    height: 800px;
+
+    .slider__container{
+        width: 1230px;
+        margin: 0 auto;
+        padding: 150px 0 0 0 ;
+
+        .slider__content{
+
+            .btn__sale{
+                @extend %buttonOutlined;
+            }
+            .btn__menswear{
+                @extend %buttonPrimary;
+            }
+
+        }
+        .slider__content div{
+            color: $ColorGray900;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .slider__content h1{
+            padding: 0;
+            color: $ColorGray900;
+            font-weight: 900;
+            font-size: 72px;
+            line-height: 130%;
+            margin: 12px 0 60px 0;
+        }
+    }
+}
+
