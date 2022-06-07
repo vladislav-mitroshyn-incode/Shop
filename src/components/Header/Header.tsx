@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Header.module.scss';
 import logo from '../../assets/image/logo.png';
 
-const Header = function Header(): JSX.Element {
+const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.header__container}>
