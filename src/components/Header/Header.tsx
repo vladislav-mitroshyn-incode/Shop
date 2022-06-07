@@ -1,61 +1,61 @@
 import React from 'react';
-import style from './Header.module.scss';
-import logo from '../../assets/image/logo.png';
+import styles from './Header.module.scss';
+import logo from '../../assets/header/logo.png';
 
 const Header = () => {
   return (
-    <header className={style.header}>
-      <div className={style.header__container}>
-        <div className={style.header__content}>
-          <div className={style.header__logo}>
+    <header className={styles.header}>
+      <div className={styles.header__container}>
+        <div className={styles.header__content}>
+          <div className={styles.header__logo}>
             <img src={logo} alt="logo" />
           </div>
-          <div className={style.header__menu}>
-            <nav className={style.menu__body}>
-              <ul className={style.menu__list}>
-                <li className={style.menu__item}>
-                  <a href="" className={style.menu__link}>
+          <div className={styles.header__menu}>
+            <nav className={styles.menu__body}>
+              <ul className={styles.menu__list}>
+                <li className={styles.menu__item}>
+                  <a href="" className={styles.menu__link}>
                     Women
                   </a>
                 </li>
-                <li className={style.menu__item}>
-                  <a href="" className={style.menu__link}>
+                <li className={styles.menu__item}>
+                  <a href="" className={styles.menu__link}>
                     Men
                   </a>
                 </li>
-                <li className={style.menu__item}>
-                  <a href="" className={style.menu__link}>
+                <li className={styles.menu__item}>
+                  <a href="" className={styles.menu__link}>
                     Girls
                   </a>
                 </li>
-                <li className={style.menu__item}>
-                  <a href="" className={style.menu__link}>
+                <li className={styles.menu__item}>
+                  <a href="" className={styles.menu__link}>
                     Boys
                   </a>
                 </li>
-                <li className={style.menu__item}>
-                  <a href="" className={style.menu__link}>
+                <li className={styles.menu__item}>
+                  <a href="" className={styles.menu__link}>
                     Sale
                   </a>
                 </li>
               </ul>
             </nav>
           </div>
-          <div className={style.header__input}>
-            <input className={style.input__search} type="text" placeholder="Search for products..." />
+          <div className={styles.header__input}>
+            <input className={styles.input__search} type="text" placeholder="Search for products..." />
           </div>
-          <div className={style.header__buttons}>
-            <input type="button" className={style.button__heart} />
+          <div className={styles.header__buttons}>
+            <input type="button" className={styles.button__heart} />
             <div />
-            <input type="button" className={style.button__cart} />
+            <input type="button" className={styles.button__cart} />
           </div>
         </div>
       </div>
-      <div className={style.header__sale}>
-        <div className={style.sale__container}>
-          <div className={style.sale__content}>
+      <div className={styles.header__sale}>
+        <div className={styles.sale__container}>
+          <div className={styles.sale__content}>
             <p>Up to 70% Off.</p>
-            <a href="">Shop our latest sale styles</a>
+            <a href="">Shop our latest sale styless</a>
           </div>
         </div>
       </div>
