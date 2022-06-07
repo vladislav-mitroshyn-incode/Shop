@@ -97,6 +97,13 @@ module.exports = {
       },
     ],
     '@typescript-eslint/naming-convention': [2, ...namingConventionConfig],
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
     'no-plusplus': [
       2,
       {
