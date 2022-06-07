@@ -1,0 +1,9 @@
+@import '../../../constants/buttons.scss';
+
+.buttonOutlined{
+    @extend %buttonOutlined;
+}
+
+.buttonPrimary{
+    @extend %buttonPrimary;
+}

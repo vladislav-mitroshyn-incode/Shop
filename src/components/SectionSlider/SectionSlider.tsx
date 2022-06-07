@@ -1,4 +1,5 @@
 import React from 'react';
+import ShopButton from '../UI/ShopButton/ShopButton';
 import styles from './SectionSlider.module.scss';
 
 const SectionSlider = () => {
@@ -8,12 +9,8 @@ const SectionSlider = () => {
         <div className={styles.slider__content}>
           <div>New collection</div>
           <h1>Menswear 2020</h1>
-          <button className={styles.btn__sale} type="button">
-            Shop sale
-          </button>
-          <button className={styles.btn__menswear} type="button">
-            Shop the menswear
-          </button>
+          <ShopButton typeButton="outlined">Shop sale</ShopButton>
+          <ShopButton typeButton="primary">Shop the menswear</ShopButton>
         </div>
       </div>
     </section>
