@@ -1,12 +1,12 @@
 {
     "products": {
-      "men": {
-        "jeans": [
-          {
-            "id": "2",
-          "size": "43"
-        }
+      "newArrivals": [
+        {"id": 1, "title": "Black and white sport cap", "price": 18.15, "image": "./assets/cap.png", "stars": 5},
+        {"id": 2, "title": "Metal bridge sunglasses", "price": 89.95, "image": "./assets/glasses.png", "stars": null},
+        {"id": 3, "title": "Green baby romper", "price": 20.40, "image": "./assets/shirt.png", "stars": 4},
+        {"id": 4, "title": "Mid-rise slim cropped fit jeans", "price": 40.00, "image": "./pants/cap.png", "stars": null},
+        {"id": 5, "title": "Red dangle earrings", "price": 29.95, "image": "./assets/dangle.png", "stars": 5},
+        {"id": 6, "title": "Baby shoes with laces", "price": 30.60, "image": "./assets/sneakers.png", "stars": null}
       ]
-      }
     }
   }
