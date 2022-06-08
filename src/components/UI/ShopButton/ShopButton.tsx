@@ -12,7 +12,7 @@ const ShopButton = (props: ShopButtonProps) => {
   return (
     <button
       {...props}
-      type="submit"
+      type="button"
       className={cn({
         [styles.buttonOutlined]: typeButton === 'outlined',
         [styles.buttonPrimary]: typeButton === 'primary',

@@ -1,24 +1,23 @@
 @import './colors.scss';
 
-%buttonOutlined{
+%ShopButton{
     padding: 15px 40px;
-    color: $ColorPrimary;
-    border: 1px solid $ColorPrimary;
     border-radius: 4px;
-    background: none ;
     margin-right: 24px;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
 }
+
+%buttonOutlined{
+    @extend %ShopButton;
+    color: $ColorPrimary;
+    border: 1px solid $ColorPrimary;
+    background: none ;
+}
 %buttonPrimary{
-    padding: 15px 40px;
+    @extend %ShopButton;
     color: $ColorWhite;
     border: 1px solid $ColorPrimary;
-    border-radius: 4px;
     background: $ColorPrimary ;
-    margin-right: 24px;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
 }
