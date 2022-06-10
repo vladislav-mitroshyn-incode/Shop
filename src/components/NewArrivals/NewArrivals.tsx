@@ -1,20 +1,20 @@
 import React, { FC, useEffect, useState } from 'react';
 import styles from './NewArrivals.module.scss';
-import apiService from '../../api/apiService';
+import apiService from '../../services/products/apiService';
 import { IArrivalData } from '../../types/types';
 import NewArrivalsItem from '../NewArrivalsItem/NewArrivalsItem';
 
 const NewArrivals: FC = () => {
   const [data, setData] = useState<IArrivalData[]>([]);
 
-  const getData = async () => {
+  const getNewArrivalsData = async () => {
     const { newArrivals }: { newArrivals: IArrivalData[] } = await apiService.get('http://localhost:3001/products');
     setData(newArrivals);
     return { newArrivals };
   };
 
   useEffect(() => {
-    getData().catch((error) => {
+    getNewArrivalsData().catch((error) => {
       console.log(error);
     });
   }, []);
