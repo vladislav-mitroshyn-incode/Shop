@@ -12,6 +12,12 @@
             display: flex;
             gap: 30px;
             
+            .card__item {
+                transition: transform .2s
+            }
+            .card__item:hover{
+                transform: scale(1.2);
+            }
             .card__item p{
                 margin: 16px 0 0 0;
                 font-style: normal;
