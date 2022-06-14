@@ -1,13 +1,13 @@
 .collections{
-  padding: 90px 30px;
+  padding: 90px 15px;
 
   .collections__content{
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-
+    margin-bottom: 15px;
+    
     .collections__body{
-      height:  500px;
+      height: 500px;
+      margin: 0 7.5px 0 15px;
 
       .collections__title{
         padding: 60px;
@@ -28,23 +28,23 @@
       }
     }
     .collections__body.body{
-      flex: 0 1 calc(2100px*37/100);
+      flex: 0 1 40%;
       background: url('../../assets/collections/image1.png') no-repeat;
       background-size: cover;
     }
     .collections__body.body2{
-      flex: 0 1 calc(2100px*60/100);
+      flex: 0 1 60%;
       background: url('../../assets/collections/image2.png') no-repeat;
       background-size: cover;
     }
     .collections__body.body3{
-      flex: 0 1 calc(2100px*60/100);
+      flex: 0 1 60%;
       background: url('../../assets/collections/image3.png') no-repeat;
       background-size: cover;
     }
     .collections__body.body4{
       position: relative;
-      flex: 0 1 calc(2100px*37/100);
+      flex: 0 1 40%;
       background: url('../../assets/collections/image4.png') no-repeat;
       background-size: cover;
     }
