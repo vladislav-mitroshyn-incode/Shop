@@ -37,6 +37,14 @@
         {"id": 34, "title": "Mid-rise slim cropped fit jeans", "price": "40.00", "image": "https://www.seekpng.com/png/detail/73-737849_denim-jean-transparent-background-jeans.png", "stars": null},
         {"id": 35, "title": "Red dangle earrings", "price": "29.95", "image": "https://www.seekpng.com/png/detail/127-1271247_the-sphere-collection-diamond-dangling-earrings-feature-drops.png", "stars": 5},
         {"id": 36, "title": "Baby shoes with laces", "price": "30.60", "image": "https://www.seekpng.com/png/detail/363-3630417_pink-child-shoes-transparent-baby-shoes-png.png", "stars": null}
+      ],
+      "popularCategories":[
+        {"id": 1, "title": "Caps", "price": "18.15", "image": "https://www.pngall.com/wp-content/uploads/2016/05/Baseball-Cap-PNG-Clipart.png", "stars": 5},
+        {"id": 2, "title": "Sunglasses", "price": "89.95", "image": "https://m.media-amazon.com/images/I/51LXCoCZgiL._UL1500_.jpg", "stars": null},
+        {"id": 3, "title": "T-shirts  ", "price": "20.40", "image": "https://image.spreadshirtmedia.com/image-server/v1/products/T210A1PA3176PT17X30Y43D1009833998S32/views/2,width=650,height=650,appearanceId=1,backgroundColor=ffffff.jpg", "stars": 4},
+        {"id": 4, "title": "Jeans", "price": "40.00", "image": "https://www.seekpng.com/png/detail/73-737849_denim-jean-transparent-background-jeans.png", "stars": null},
+        {"id": 5, "title": "Dangles", "price": "29.95", "image": "https://www.seekpng.com/png/detail/127-1271247_the-sphere-collection-diamond-dangling-earrings-feature-drops.png", "stars": 5},
+        {"id": 6, "title": "Shoes", "price": "30.60", "image": "https://www.seekpng.com/png/detail/363-3630417_pink-child-shoes-transparent-baby-shoes-png.png", "stars": null}
       ]
     }
   }
