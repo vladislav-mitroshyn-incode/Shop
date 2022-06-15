@@ -1,4 +1,4 @@
-import { IArrivalData, IPopularCategoriesData } from '../types/types';
+import { IArrivalData, ICategoriesData, IPopularCategoriesData1 } from '../types/types';
 import { productsUtl, categoriesUtl } from '../assets/urls';
 
 export const getNewArrivalsData = async () => {
@@ -7,7 +7,7 @@ export const getNewArrivalsData = async () => {
 };
 
 export const getPopularCategoriesData = async () => {
-  const response: IPopularCategoriesData = await ApiService.get(categoriesUtl);
+  const response: Record<IPopularCategoriesData1, ICategoriesData[]> = await ApiService.get(categoriesUtl);
   return response;
 };
 

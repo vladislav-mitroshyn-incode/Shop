@@ -14,11 +14,4 @@ export interface ICategoriesData {
   stars: number | null;
 }
 
-export interface IPopularCategoriesData {
-  caps: ICategoriesData[];
-  dangles: ICategoriesData[];
-  jeans: ICategoriesData[];
-  shoes: ICategoriesData[];
-  sunglasses: ICategoriesData[];
-  tShirt: ICategoriesData[];
-}
+export type IPopularCategoriesData1 = 'caps' | 'dangles' | 'jeans' | 'shoes' | 'sunglasses' | 'tShirt';

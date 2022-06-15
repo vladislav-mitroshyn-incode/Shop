@@ -8,16 +8,16 @@ import Jackets from '../../assets/categories/image4.png';
 import Coats from '../../assets/categories/image5.png';
 import PopularCategoriItem from '../PopularCategoriItem/PopularCategoriItem';
 
-const PopularCategories: FC = () => {
-  const categories = [
-    { img: <img src={Tops} alt="Tops" />, name: 'Tops' },
-    { img: <img src={tShirts} alt="T-shirts" />, name: 'T-shirts' },
-    { img: <img src={Caps} alt="Caps" />, name: 'Caps' },
-    { img: <img src={Sandals} alt="Sandals" />, name: 'Sandals' },
-    { img: <img src={Jackets} alt="Jackets" />, name: 'Jackets' },
-    { img: <img src={Coats} alt="Coats" />, name: 'Coats' },
-  ];
+const categories = [
+  { img: <img src={Tops} alt="Tops" />, name: 'Tops' },
+  { img: <img src={tShirts} alt="T-shirts" />, name: 'T-shirts' },
+  { img: <img src={Caps} alt="Caps" />, name: 'Caps' },
+  { img: <img src={Sandals} alt="Sandals" />, name: 'Sandals' },
+  { img: <img src={Jackets} alt="Jackets" />, name: 'Jackets' },
+  { img: <img src={Coats} alt="Coats" />, name: 'Coats' },
+];
 
+const PopularCategories: FC = () => {
   return (
     <section className={styles.popularCategories}>
       <div className={styles.popularCategories__container}>

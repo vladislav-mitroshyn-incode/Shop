@@ -3,19 +3,19 @@ import React from 'react';
 import styles from './ShopButton.module.scss';
 
 interface ShopButtonProps {
-  typebutton: string;
+  typeButton: string;
   children: string;
 }
 
 const ShopButton = (props: ShopButtonProps) => {
-  const { typebutton, children } = props;
+  const { typeButton, children, ...rest } = props;
   return (
     <button
-      {...props}
+      {...rest}
       type="button"
       className={cn({
-        [styles.buttonOutlined]: typebutton === 'outlined',
-        [styles.buttonPrimary]: typebutton === 'primary',
+        [styles.buttonOutlined]: typeButton === 'outlined',
+        [styles.buttonPrimary]: typeButton === 'primary',
       })}
     >
       {children}
