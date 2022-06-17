@@ -19,7 +19,7 @@ interface SettingsProp {
 
 const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
   const settings: SettingsProp = {
-    infinite: true,
+    infinite: false,
     dots: true,
     arrows: false,
     dotsClass: styles.my__dots,

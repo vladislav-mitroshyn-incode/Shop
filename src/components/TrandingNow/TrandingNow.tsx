@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getTrandingNowData } from '../../services';
-import { IArrivalData } from '../../types/types';
+import { ITrandingData } from '../../types/types';
 import TrandingNowItem from '../TrandingNowItem/TrandingNowItem';
 import ShopButton from '../UI/ShopButton/ShopButton';
 import styles from './TrandingNow.module.scss';
 
 const TrandingNow: React.FC = () => {
-  const [data, setData] = useState<IArrivalData[]>([]);
+  const [data, setData] = useState<ITrandingData[]>([]);
 
   useEffect(() => {
     getTrandingNowData()
