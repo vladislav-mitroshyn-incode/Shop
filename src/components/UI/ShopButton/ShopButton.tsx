@@ -8,10 +8,10 @@ interface ShopButtonProps {
 }
 
 const ShopButton = (props: ShopButtonProps) => {
-  const { typeButton, children } = props;
+  const { typeButton, children, ...rest } = props;
   return (
     <button
-      {...props}
+      {...rest}
       type="button"
       className={cn({
         [styles.buttonOutlined]: typeButton === 'outlined',
