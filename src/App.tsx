@@ -3,6 +3,7 @@ import Collections from './components/Collections/Collections';
 import Header from './components/Header/Header';
 import NewArrivals from './components/NewArrivals/NewArrivals';
 import SectionSlider from './components/SectionSlider/SectionSlider';
+import TrandingNow from './components/TrandingNow/TrandingNow';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Cards />
         <NewArrivals />
         <Collections />
+        <TrandingNow />
       </main>
     </div>
   );

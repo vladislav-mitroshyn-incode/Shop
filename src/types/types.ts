@@ -5,3 +5,5 @@ export interface IArrivalData {
   image: string;
   stars: number | null;
 }
+
+export type ITrandingData = IArrivalData;
