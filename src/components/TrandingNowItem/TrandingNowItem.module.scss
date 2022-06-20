@@ -1,5 +1,20 @@
 @import '../../constants/colors.scss';
 
+%slickButtons{
+  content: url('../../assets/slider-tranding/arrowRight.png');
+	font-family: none;
+	opacity: 1;
+	border: 1px solid $ColorPrimary;
+	background-color: $ColorPrimary;
+	border-radius: 60%;
+}
+%slickButtonsDisabled{
+  content: url('../../assets/slider-tranding/arrowLeft.png');
+  position: absolute;
+  border: transparent ;
+  background-color: transparent;
+}
+
 .tranding__card{
 
   .card__image{
@@ -32,24 +47,36 @@
 	position: absolute;
 	top: -55px;
 }
+
 .tranding__card :global(.slick-arrow.slick-prev) {
 	left: 91%;
 }
+.tranding__card :global(.slick-prev:before) {
+  @extend %slickButtons;
+  position: absolute;
+  bottom: -12px;
+  right: -10px;
+  transform: rotate(-180deg);
+	padding: 6px 9px 5px 9px;
+}
+.tranding__card :global(.slick-prev.slick-disabled:before) {
+  @extend %slickButtonsDisabled;
+  bottom: -7px;
+  right: -10px;
+  transform: none !important;
+}
+
 .tranding__card :global(.slick-arrow.slick-next) {
 	right: 4%;
 	height: 22px;
 }
-.tranding__card :global(.slick-prev:before) {
-	content: url('../../assets/slider-tranding/arrowLeft.png') !important;
-	font-family: none;
-	color: black;
-}
 .tranding__card :global(.slick-next:before) {
-	content: url('../../assets/slider-tranding/arrowRight.png') !important;
-	font-family: none;
-	opacity: 1;
-	border: 1px solid $ColorPrimary;
-	background-color: $ColorPrimary;
+  @extend %slickButtons;
 	padding: 13px 9px 3px 9px;
-	border-radius: 60%;
+}
+.tranding__card :global(.slick-next.slick-disabled:before) {
+  @extend %slickButtonsDisabled;
+  bottom: -14px;
+  right: -16px;
+  transform: rotate(-180deg);
 }
