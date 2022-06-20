@@ -6,6 +6,8 @@ export interface IArrivalData {
   stars: number | null;
 }
 
+export type ITrandingData = IArrivalData;
+
 export interface ICategoriesData {
   id: number;
   title: string;
