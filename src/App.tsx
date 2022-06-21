@@ -1,5 +1,6 @@
 import Cards from './components/Cards/Cards';
 import Collections from './components/Collections/Collections';
+import FashionBlog from './components/FashionBlog/FashionBlog';
 import Header from './components/Header/Header';
 import NewArrivals from './components/NewArrivals/NewArrivals';
 import PopularCategories from './components/PopularCategories/PopularCategories';
@@ -17,6 +18,7 @@ const App = () => {
         <Collections />
         <PopularCategories />
         <TrandingNow />
+        <FashionBlog />
       </main>
     </div>
   );
