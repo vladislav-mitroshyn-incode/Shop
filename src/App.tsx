@@ -1,3 +1,4 @@
+import Advantage from './components/Advantage/Advantage';
 import Cards from './components/Cards/Cards';
 import Collections from './components/Collections/Collections';
 import Header from './components/Header/Header';
@@ -18,6 +19,7 @@ const App = () => {
         <Collections />
         <PopularCategories />
         <TrandingNow />
+        <Advantage />
         <Instagram />
       </main>
     </div>
