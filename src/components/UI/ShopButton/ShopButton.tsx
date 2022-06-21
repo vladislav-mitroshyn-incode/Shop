@@ -5,15 +5,16 @@ import styles from './ShopButton.module.scss';
 interface ShopButtonProps {
   typeButton: string;
   children: string;
+  className?: string;
 }
 
 const ShopButton = (props: ShopButtonProps) => {
-  const { typeButton, children, ...rest } = props;
+  const { typeButton, className, children, ...rest } = props;
   return (
     <button
       {...rest}
       type="button"
-      className={cn({
+      className={cn(className, {
         [styles.buttonOutlined]: typeButton === 'outlined',
         [styles.buttonPrimary]: typeButton === 'primary',
       })}

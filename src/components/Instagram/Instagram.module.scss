@@ -1,0 +1,53 @@
+@import '../../constants/colors.scss'; 
+
+.instagram{
+  margin: 90px 0;
+
+  .instagram__container{
+    width: 1230px;
+    margin: 0 auto;
+    display: flex;
+
+    .instagram__info{
+      flex: 0 1 380px;
+      margin: 0 15px 0 0;
+
+      .instagram__btn{
+        margin: 60px 0;
+
+        .btn__icon{
+          padding: 15px 40px 15px 72px;
+          background: url('../../assets/instagram/Instagram.svg') no-repeat;
+          background-position: bottom 12px left 40px;
+        }
+      }
+    }
+    .instagram__info p{
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $ColorGray900;
+    }
+    .instagram__info h1{
+      margin: 8px 0 0 0;
+      font-weight: 900;
+      font-size: 46px;
+      line-height: 130%;
+      color: $ColorGray900;
+    }
+    .instagram__info h1 a{
+      text-decoration: none;
+      color: $ColorGray900;
+    }
+    .instagram__images{
+      display: flex;
+      margin: 0 -15px 0 -15px;
+    }
+    .instagram__images div{
+      margin: 0 15px 0 15px;
+    }
+  }
+}
