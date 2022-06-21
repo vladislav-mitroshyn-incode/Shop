@@ -10,25 +10,25 @@
 		.advantage__content{
 			display: flex;
 
-			.advantage__card::after {
-				content: '';
-				position: absolute;
-				display: block;
-				width: 1px;
-				height: 100%;
-				right: 0;
-				top: 0;
-				background: linear-gradient(to top, white, #DADBDD, white);  
-			}
-			.advantage__card:last-child::after {
-				background: none;  
-			}
 			.advantage__card{
 				position: relative;
 				flex: 0 1 230px;
 				padding: 0 40px;
 				text-align: center;
 
+				&::after{
+					content: '';
+					position: absolute;
+					display: block;
+					width: 1px;
+					height: 100%;
+					right: 0;
+					top: 0;
+					background: linear-gradient(to top, white, #DADBDD, white);  
+				}
+				&:last-child::after{
+					background: none; 
+				}
 				.card__image{
 					margin: 24px 0;
 					text-align: center;
