@@ -10,7 +10,9 @@ const SectionSlider = () => {
           <div>New collection</div>
           <h1>Menswear 2020</h1>
           <ShopButton typeButton="outlined">Shop sale</ShopButton>
-          <ShopButton typeButton="primary">Shop the menswear</ShopButton>
+          <ShopButton className={styles.slider__button_primary} typeButton="primary">
+            Shop the menswear
+          </ShopButton>
         </div>
       </div>
     </section>
