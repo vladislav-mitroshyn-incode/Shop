@@ -7,3 +7,14 @@
 .buttonPrimary{
     @extend %buttonPrimary;
 }
+
+.buttonOutlinedIcon{
+    position: relative;
+    @extend %buttonOutlinedIcon;
+}
+
+.button__icon{
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
