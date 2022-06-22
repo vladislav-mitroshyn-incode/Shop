@@ -4,6 +4,7 @@ import styles from './Instagram.module.scss';
 import image from '../../assets/instagram/image.png';
 import image2 from '../../assets/instagram/image2.png';
 import image3 from '../../assets/instagram/image3.png';
+import { ReactComponent as instagram } from '../../assets/instagram/Instagram.svg';
 import ContainerComponent from '../UI/ContainerComponent/ContainerComponent';
 
 const instagramImages = [
@@ -23,7 +24,7 @@ const Instagram: React.FC = () => {
               <a href="#">@createx_store</a>
             </h1>
             <div className={styles.instagram__btn}>
-              <ShopButton className={styles.btn__icon} typeButton="outlined">
+              <ShopButton icon={instagram} typeButton="outlined">
                 Follow instagram
               </ShopButton>
             </div>
