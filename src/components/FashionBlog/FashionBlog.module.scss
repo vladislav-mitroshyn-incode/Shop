@@ -1,0 +1,105 @@
+@import '../../constants/colors.scss';
+
+.fashionBlog{
+  margin: 90px 0;
+
+  .fashionBlog__title {
+    .title__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 30px 0;
+
+      .title__text{
+        margin: 0;
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        color: $ColorGray900;
+      }
+    }
+  }
+
+  .fashionBlog__content{
+    display: flex;
+
+    .fashionBlog__blog{
+      flex: 0 1 600px;
+      border-radius: 4px;
+      box-shadow: 0px 80px 80px -20px 
+        rgba(154, 156, 165, 0.08), 
+        0px 30px 24px -10px 
+        rgba(154, 156, 165, 0.05), 
+        0px 12px 10px -6px 
+        rgba(154, 156, 165, 0.04), 
+        0px 4px 4px -4px 
+        rgba(30, 33, 44, 0.03);
+
+      &:hover{
+        border-radius: 4px;
+        box-shadow: 0px 80px 80px -20px 
+        rgba(154, 156, 165, 0.16), 
+        0px 30px 24px -10px 
+        rgba(154, 156, 165, 0.1), 
+        0px 12px 10px -6px 
+        rgba(154, 156, 165, 0.08), 
+        0px 4px 4px -4px 
+        rgba(30, 33, 44, 0.05);
+        .blog__body h2{
+          color: $ColorPrimary;
+        }
+      }
+
+      &:first-child{
+        margin: 0 30px 0 0;
+      }
+
+      .blog__body {
+        margin: 24px 24px;
+
+        h2{
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 150%;
+          margin: 0 0 12px 0;
+          color: $ColorGray900;
+        }
+        .blog__info{
+          span{
+            position: relative;
+            padding: 0 12px;
+            font-size: 14px;
+            line-height: 150%;
+            color: $ColorGray500;
+
+            &:first-child{
+              padding: 0 12px 0 0;
+            }
+            &::after{
+              position: absolute;
+              content: '';
+              width: 1px;
+              height: 12px;
+              right: 0;
+              top: 1px;
+              background: $ColorGray500;
+            }
+            &:last-child{
+              padding: 0 0 0 36px;
+              background: url('../../assets/fashion-blog/Chat.svg') no-repeat;
+              background-position: bottom 1px left 12px ;
+            }
+            &:last-child:after{
+              background: none;
+            }
+          }
+        }
+        p{
+          font-size: 16px;
+          line-height: 160%;
+          color: $ColorGray800;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import Advantage from './components/Advantage/Advantage';
 import Cards from './components/Cards/Cards';
 import Collections from './components/Collections/Collections';
+import FashionBlog from './components/FashionBlog/FashionBlog';
 import Header from './components/Header/Header';
 import Instagram from './components/Instagram/Instagram';
 import NewArrivals from './components/NewArrivals/NewArrivals';
@@ -21,6 +22,7 @@ const App = () => {
         <TrandingNow />
         <Advantage />
         <Instagram />
+        <FashionBlog />
       </main>
     </div>
   );
