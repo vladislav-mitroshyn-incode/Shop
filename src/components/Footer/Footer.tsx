@@ -10,21 +10,21 @@ import appStore from '../../assets/footer/appStore.png';
 import googlePlay from '../../assets/footer/googlePlay.png';
 
 const footerItems = [
-  { title: 'Help', subTitle: ['Delivery & returns', 'FAQ', 'Track order', 'Contacts', 'Blog'], contacts: null },
-  { title: 'Shop', subTitle: ['New arrivals', 'Trending now', 'Sales', 'Brands'] },
+  { title: 'Help', links: ['Delivery & returns', 'FAQ', 'Track order', 'Contacts', 'Blog'], contacts: null },
+  { title: 'Shop', links: ['New arrivals', 'Trending now', 'Sales', 'Brands'] },
 ];
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <ContainerComponent>
         <div className={styles.footer__body}>
-          {footerItems.map((item) => (
-            <div className={styles.footer__item}>
+          {footerItems.map((item, index) => (
+            <div key={index} className={styles.footer__item}>
               <p className={styles.item__title}>{item.title}</p>
-              <ul className={styles.item__subTitle}>
-                {item.subTitle.map((subTitle) => (
-                  <li className={styles.subTitle__title}>
-                    <a href="#">{subTitle}</a>
+              <ul className={styles.item__link}>
+                {item.links.map((link, indexTwo) => (
+                  <li key={indexTwo} className={styles.link__title}>
+                    <a href="#">{link}</a>
                   </li>
                 ))}
               </ul>
