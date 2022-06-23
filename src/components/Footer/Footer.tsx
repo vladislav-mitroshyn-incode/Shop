@@ -22,8 +22,8 @@ const Footer = () => {
             <div key={index} className={styles.footer__item}>
               <p className={styles.item__title}>{item.title}</p>
               <ul className={styles.item__link}>
-                {item.links.map((link, indexTwo) => (
-                  <li key={indexTwo} className={styles.link__title}>
+                {item.links.map((link, linkIndex) => (
+                  <li key={linkIndex} className={styles.link__title}>
                     <a href="#">{link}</a>
                   </li>
                 ))}
