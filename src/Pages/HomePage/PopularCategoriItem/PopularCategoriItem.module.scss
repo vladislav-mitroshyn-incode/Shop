@@ -1,0 +1,22 @@
+@import '../../../constants/colors.scss';
+
+.popularCategories__content{
+  display: flex;
+  justify-content: center;
+
+  .popularCategories__body{
+    margin: 0 15px;
+
+    .body__image{
+      
+    }
+    .body__name{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      margin-top: 24px;
+      text-align: center;
+      color: $ColorGray900;
+    }
+  }
+}
