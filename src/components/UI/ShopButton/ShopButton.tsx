@@ -7,6 +7,7 @@ interface ShopButtonProps {
   children: string;
   className?: string;
   icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  onClick?: () => any;
 }
 
 const ShopButton = (props: ShopButtonProps) => {
