@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import logo from '../../assets/header/logo.png';
+import ShopInput from '../UI/ShopInput/ShopInput';
 
 const Header = () => {
   return (
@@ -42,7 +43,7 @@ const Header = () => {
             </nav>
           </div>
           <div className={styles.header__input}>
-            <input className={styles.input__search} type="text" placeholder="Search for products..." />
+            <ShopInput placeholder="Search for products..." />
           </div>
           <div className={styles.header__buttons}>
             <input type="button" className={styles.button__heart} />
