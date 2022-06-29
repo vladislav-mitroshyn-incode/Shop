@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 import logo from '../../assets/header/logo.png';
 import ShopInput from '../UI/ShopInput/ShopInput';
@@ -9,7 +10,9 @@ const Header = () => {
       <div className={styles.header__container}>
         <div className={styles.header__content}>
           <div className={styles.header__logo}>
-            <img src={logo} alt="logo" />
+            <NavLink to="/">
+              <img src={logo} alt="logo" />
+            </NavLink>
           </div>
           <div className={styles.header__menu}>
             <nav className={styles.menu__body}>
