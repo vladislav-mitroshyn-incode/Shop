@@ -9,7 +9,7 @@ const fashionBlogs = [
   {
     title: 'Bag Trends for Summer 2020',
     type: 'Fashion',
-    data: { month: 'August', day: 24, year: 2020 },
+    date: { month: 'August', day: 24, year: 2020 },
     comments: null,
     subTitle:
       'Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...',
@@ -18,7 +18,7 @@ const fashionBlogs = [
   {
     title: 'Top 10 of This Season’s Hottest Sneakers',
     type: 'Lifestyle',
-    data: { month: 'July', day: 16, year: 2020 },
+    date: { month: 'July', day: 16, year: 2020 },
     comments: 4,
     subTitle:
       'Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...',
@@ -27,7 +27,7 @@ const fashionBlogs = [
   {
     title: 'Wardrobe Essentials Everyone Should Own Today',
     type: 'Celebrity style',
-    data: { month: 'August', day: 5, year: 2020 },
+    date: { month: 'August', day: 5, year: 2020 },
     comments: 4,
     subTitle:
       'Mauris tincidunt sollicitudin tristique odio eget volutpat. Fringilla viverra amet, mi interdum blandit. Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus, hac...',
@@ -36,7 +36,7 @@ const fashionBlogs = [
   {
     title: 'Modern Accessories 2020: Why Simple Isn`t Easy',
     type: 'Fashion',
-    data: { month: 'July', day: 2, year: 2020 },
+    date: { month: 'July', day: 2, year: 2020 },
     comments: 4,
     subTitle:
       'Tellus sed morbi massa quis sed. Faucibus tincidunt magna enim ultricies fringilla at rhoncus, hac. Sollicitudin et nec congue magna quis commodo quis luctus risus. Dolor, dignissim semper faucibus quisque massa ut enim...',
@@ -53,8 +53,8 @@ const FashionBlogItem = () => {
           <div className={styles.blog__body}>
             <div className={styles.blog__info}>
               <span>{fashionBlog.type}</span>
-              <span>{`${fashionBlog.data.month} ${fashionBlog.data.day}, ${fashionBlog.data.year}`}</span>
-              <span>{fashionBlog.comments === null ? 'No comments' : `${fashionBlog.comments} comments`}</span>
+              <span>{`${fashionBlog.date.month} ${fashionBlog.date.day}, ${fashionBlog.date.year}`}</span>
+              <span>{!fashionBlog.comments ? 'No comments' : `${fashionBlog.comments} comments`}</span>
             </div>
             <h2>{fashionBlog.title}</h2>
             <p>{fashionBlog.subTitle}</p>
