@@ -1,0 +1,44 @@
+@import '../../constants/colors.scss';
+
+
+.fashionBlog{
+
+  .fashionBlog__content{
+    display: flex;
+    overflow: hidden;
+
+    .fashionBlog__fashion{
+      flex: 0 1 810px;
+      margin: 0 78px 90px 0;
+
+      h1{
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        color: $ColorGray900;
+        margin: 32px 0;
+      }
+    }
+    .fashionBlog__other{
+      margin: 40px 0;
+      flex: 0 1 auto;
+
+      .fashionBlog__input{
+        position: relative;
+        padding: 0 0 32px 0;
+
+        input{
+          width: 320px;
+        }
+        &::before{
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: $ColorGray300;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../../constants/colors.scss';
+
+.advantage{
+	margin: 90px 0;
+
+	.advantage__container{
+		width: 1230px;
+		margin: 0 auto;
+
+		.advantage__content{
+			display: flex;
+
+			.advantage__card{
+				position: relative;
+				flex: 0 1 230px;
+				padding: 0 40px;
+				text-align: center;
+
+				&::after{
+					content: '';
+					position: absolute;
+					display: block;
+					width: 1px;
+					height: 100%;
+					right: 0;
+					top: 0;
+					background: linear-gradient(to top, white, #DADBDD, white);  
+				}
+				&:last-child::after{
+					background: none; 
+				}
+				.card__image{
+					margin: 24px 0;
+					text-align: center;
+				}				
+				.card__content h1{
+					margin: 0 0 9px 0;
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 150%;
+					color: $ColorGray900;
+				}
+				.card__content p{
+					margin: 0;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 160%;
+					color: $ColorGray500;
+				}
+			}
+		}		
+	}
+}
