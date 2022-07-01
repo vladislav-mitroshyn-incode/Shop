@@ -3,6 +3,7 @@ import styles from './NewArrivals.module.scss';
 import { IArrivalData } from '../../../types/types';
 import NewArrivalsItem from '../NewArrivalsItem/NewArrivalsItem';
 import { getNewArrivalsData } from '../../../services';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const NewArrivals: FC = () => {
   const [data, setData] = useState<IArrivalData[]>([]);
@@ -17,7 +18,7 @@ const NewArrivals: FC = () => {
 
   return (
     <section className={styles.newArrivals}>
-      <div className={styles.newArrivals__container}>
+      <ContainerComponent>
         <div className={styles.newArrivals__title}>
           <h1>New arrivals</h1>
           <p>Check out our latest arrivals for the upcoming season</p>
@@ -25,7 +26,7 @@ const NewArrivals: FC = () => {
             <a>See the collection here</a>
           </p>
         </div>
-      </div>
+      </ContainerComponent>
       <NewArrivalsItem data={data} />
     </section>
   );

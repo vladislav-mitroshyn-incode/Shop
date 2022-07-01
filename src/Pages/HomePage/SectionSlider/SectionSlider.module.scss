@@ -1,14 +1,11 @@
 @import '../../../constants/colors.scss';
 @import '../../../constants/buttons.scss';
 
-
 .slider{
     background: url('../../../assets/slider/bg.png') center;
     height: 800px;
 
-    .slider__container{
-        width: 1230px;
-        margin: 0 auto;
+    .slider__body{
         padding: 150px 0 0 0 ;
 
         .slider__content{
@@ -16,7 +13,6 @@
                 margin-left: 24px;
             }
         }
-        
         .slider__content div{
             color: $ColorGray900;
             font-weight: 700;

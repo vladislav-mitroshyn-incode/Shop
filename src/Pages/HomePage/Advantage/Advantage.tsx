@@ -4,6 +4,7 @@ import delivery from '../../../assets/advantage/delivery.svg';
 import support from '../../../assets/advantage/support.svg';
 import shield from '../../../assets/advantage/shield.svg';
 import payment from '../../../assets/advantage/payment.svg';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const advantages = [
   {
@@ -31,7 +32,7 @@ const advantages = [
 const Advantage = () => {
   return (
     <section className={styles.advantage}>
-      <div className={styles.advantage__container}>
+      <ContainerComponent>
         <div className={styles.advantage__content}>
           {advantages.map((advantage, index) => (
             <div key={index} className={styles.advantage__card}>
@@ -43,7 +44,7 @@ const Advantage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </ContainerComponent>
     </section>
   );
 };
