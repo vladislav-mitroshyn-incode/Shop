@@ -7,6 +7,7 @@ import Sandals from '../../../assets/categories/image3.png';
 import Jackets from '../../../assets/categories/image4.png';
 import Coats from '../../../assets/categories/image5.png';
 import PopularCategoriItem from '../PopularCategoriItem/PopularCategoriItem';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const categories = [
   { img: <img src={Tops} alt="Tops" />, name: 'Tops' },
@@ -20,10 +21,12 @@ const categories = [
 const PopularCategories: FC = () => {
   return (
     <section className={styles.popularCategories}>
-      <div className={styles.popularCategories__container}>
-        <h1>Popular categories</h1>
-        <PopularCategoriItem categories={categories} />
-      </div>
+      <ContainerComponent>
+        <div className={styles.popularCategories__body}>
+          <h1>Popular categories</h1>
+          <PopularCategoriItem categories={categories} />
+        </div>
+      </ContainerComponent>
     </section>
   );
 };

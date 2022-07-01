@@ -3,10 +3,6 @@
 .newArrivals{
  margin: 24px 0 0 0;
 
- .newArrivals__container{
-  width: 1230px;
-  margin: 0 auto;
-
   .newArrivals__title{
    display: flex;
    flex-direction: column;
@@ -20,15 +16,14 @@
    line-height: 130%
   }
   .newArrivals__title p{
-   margin: 0 0 0 0;
-   color: $ColorGray500;
-   font-weight: 400;
-   font-size: 18px;
-   line-height: 150%;
+  margin: 0 0 0 0;
+  color: $ColorGray500;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
   }
   .newArrivals__title p a{
    color: $ColorPrimaryLight;
    text-decoration: underline;
   }
- }
 }

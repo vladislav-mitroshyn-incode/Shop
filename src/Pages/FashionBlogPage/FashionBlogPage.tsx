@@ -1,5 +1,5 @@
 import React from 'react';
-import ContainerComponent from '../../components/ContainerComponent/ContainerComponent';
+import ContainerComponent from '../../components/UI/ContainerComponent/ContainerComponent';
 import FashionBlogItem from './FashionBlogItem/FashionBlogItem';
 import TopPanel from '../../components/UI/TopPanel/TopPanel';
 import styles from './FashionBlogPage.module.scss';

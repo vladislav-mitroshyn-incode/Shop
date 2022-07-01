@@ -3,11 +3,12 @@ import styles from './Cards.module.scss';
 import womenImg from '../../../assets/card/women.png';
 import menImg from '../../../assets/card/men.png';
 import childImg from '../../../assets/card/child.png';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const Cards = () => {
   return (
     <section className={styles.cards}>
-      <div className={styles.cards__container}>
+      <ContainerComponent>
         <div className={styles.cards__list}>
           <div className={styles.card__item}>
             <img src={womenImg} alt="the girl in the pic" />
@@ -22,7 +23,7 @@ const Cards = () => {
             <p>Kids’</p>
           </div>
         </div>
-      </div>
+      </ContainerComponent>
     </section>
   );
 };

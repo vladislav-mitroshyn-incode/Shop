@@ -4,7 +4,7 @@ import styles from './FashionBlog.module.scss';
 import bag from '../../../assets/fashion-blog/bag.png';
 import sneaker from '../../../assets/fashion-blog/sneaker.png';
 import ShopButton from '../../../components/UI/ShopButton/ShopButton';
-import ContainerComponent from '../../../components/ContainerComponent/ContainerComponent';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const fashionBlogs = [
   {

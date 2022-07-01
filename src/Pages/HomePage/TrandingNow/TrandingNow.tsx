@@ -4,6 +4,7 @@ import { ITrandingData } from '../../../types/types';
 import TrandingNowItem from '../TrandingNowItem/TrandingNowItem';
 import ShopButton from '../../../components/UI/ShopButton/ShopButton';
 import styles from './TrandingNow.module.scss';
+import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const TrandingNow: React.FC = () => {
   const [data, setData] = useState<ITrandingData[]>([]);
@@ -16,13 +17,15 @@ const TrandingNow: React.FC = () => {
 
   return (
     <section className={styles.tranding}>
-      <div className={styles.tranding__container}>
-        <h1>Tranding now</h1>
-        <TrandingNowItem data={data} />
-        <div className={styles.tranding__btn}>
-          <ShopButton typeButton="outlined">Explore top sales</ShopButton>
+      <ContainerComponent>
+        <div className={styles.tranding__body}>
+          <h1>Tranding now</h1>
+          <TrandingNowItem data={data} />
+          <div className={styles.tranding__btn}>
+            <ShopButton typeButton="outlined">Explore top sales</ShopButton>
+          </div>
         </div>
-      </div>
+      </ContainerComponent>
     </section>
   );
 };
