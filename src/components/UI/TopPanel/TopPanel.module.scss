@@ -1,10 +1,10 @@
 @import '../../../constants/colors.scss';
 
-.TopPanel{
+.topPanel{
   padding: 15px 0;
   background: $ColorGray300;
 
-  .fashionBlog__panel{
+  .topPanel__body{
     display: flex;
     align-items: center;
     
@@ -15,19 +15,25 @@
       border: none;
       cursor: pointer;
     }
-    button{
-      position: relative;
-      background-color: transparent;
-      border: none;
-      color: $ColorGray500;
-      font-size: 14px;
-      font-family: 'Lato';
-      margin: 0 0 0 18px;
-      &::before{
-        position: absolute;
-        content: url('../../../assets/fashion-blog/Right-chevron.svg');
-        top: -2;
-        left: -15px;
+    .topPanel__pagesLink{
+      .pagesLink__active{
+        color: $ColorGray800;
+      }
+      button{
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        color: $ColorGray500;
+        font-size: 14px;
+        font-family: 'Lato';
+        margin: 0 0 0 18px;
+        &::before{
+          position: absolute;
+          content: url('../../../assets/fashion-blog/Right-chevron.svg');
+          top: -2;
+          left: -15px;
+        }
       }
     }
   }
