@@ -1,0 +1,104 @@
+@import '../../../constants/colors.scss';
+
+%firstChildBlogTitle{
+  position: relative;
+  margin-left: 24px ;
+  font-size: 14px;
+  line-height: 150%;
+  color: $ColorGray500;
+}
+%firstChildBlogTitleIcon{
+  position: absolute;
+  content: url('../../../assets/fashion-blog/featurePosts/Clock.svg');
+  left: -24px ;
+  top: 0;
+}
+%lastChildBlogTitle{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: $ColorGray900;
+  cursor: pointer;
+}
+%slickButton{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  width: 140px;
+}
+%slickButtonBefore{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: $ColorGray800;
+  font-family: "Lato";
+}
+
+.slider__body{
+  position: relative;
+
+  p{
+    margin: 0 0 8px 0;
+    &:first-child{
+      @extend %firstChildBlogTitle;
+    }
+    &:first-child::before{
+      @extend %firstChildBlogTitleIcon;
+    }
+    &:last-child{
+      @extend %lastChildBlogTitle;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      color: $ColorGray900;
+      cursor: pointer;
+    }
+    &:last-child:hover{
+      color: $ColorPrimary;
+    }
+  }
+  .blog__body{
+    display: flex !important;
+
+    .blog__title{
+      margin: 0 0 0 20px;
+    }
+  }
+  .blog__body__reverse{
+    display: flex !important;
+
+    .blog__title__reverse{
+      margin: 0 20px 0 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+.slider__body :global(.slick-arrow) {
+	position: absolute;
+  top: -40px;
+}
+.slider__body :global(.slick-arrow.slick-prev) {
+  @extend %slickButton;
+  left: 0;
+}
+.slider__body :global(.slick-arrow.slick-next) {
+  @extend %slickButton;
+  right: 0;
+}
+.slider__body :global(.slick-prev:before) {
+  @extend %slickButtonBefore;
+  content: 'Prev Post';
+  background: url('../../../assets/fashion-blog/blog/arrow-left.svg') no-repeat;
+  background-position: bottom 2px left 2px;
+}
+.slider__body :global(.slick-next:before) {
+  @extend %slickButtonBefore;
+  content: 'Next Post';
+  background: url('../../../assets/fashion-blog/blog/arrow-right.svg') no-repeat;
+  background-position: bottom 2px right 2px;
+}

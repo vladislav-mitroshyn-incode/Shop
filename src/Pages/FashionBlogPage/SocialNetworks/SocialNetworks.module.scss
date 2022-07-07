@@ -1,0 +1,18 @@
+@import '../../../constants/colors.scss';
+
+.social{
+  svg{
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 6px 0 6px;
+    &:last-child{
+      margin: 0 0 0 6px;
+    }
+    &:hover{
+      rect,
+      path{
+        fill: $ColorPrimary;
+      }
+    }
+  }
+}

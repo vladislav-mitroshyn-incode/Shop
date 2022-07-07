@@ -1,7 +1,9 @@
+import FashionBlogItemPage from '../Pages/FashionBlogPage/FashionBlogItemPage/FashionBlogItemPage';
 import FashionBlogPage from '../Pages/FashionBlogPage/FashionBlogPage';
 import HomePage from '../Pages/HomePage/HomePage';
 
 export const routes = [
   { path: '/', component: <HomePage /> },
-  { path: '/posts', component: <FashionBlogPage /> },
+  { path: '/blogs', component: <FashionBlogPage /> },
+  { path: '/blogs/:id', component: <FashionBlogItemPage /> },
 ];

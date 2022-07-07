@@ -11,7 +11,7 @@ import Tags from './Tags/Tags';
 const FashionBlogPage = () => {
   return (
     <section className={styles.fashionBlog}>
-      <TopPanel text="Fashion blog" />
+      <TopPanel currentPage="Fashion blog" />
       <ContainerComponent>
         <div className={styles.fashionBlog__content}>
           <div className={styles.fashionBlog__fashion}>

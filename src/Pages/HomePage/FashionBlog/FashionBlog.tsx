@@ -38,7 +38,7 @@ const FashionBlog = () => {
             <div className={styles.title__content}>
               <h1 className={styles.title__text}>Fashion blog</h1>
               <div className={styles.title__btn}>
-                <ShopButton onClick={() => navigate('/posts')} typeButton="outlined">
+                <ShopButton onClick={() => navigate('/blogs')} typeButton="outlined">
                   View blog
                 </ShopButton>
               </div>
