@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './FeaturedPosts.module.scss';
 import first from '../../../assets/fashion-blog/featurePosts/image.svg';
 import first2 from '../../../assets/fashion-blog/featurePosts/image2.svg';
-import first3 from '../../../assets/fashion-blog/featurePosts/image3.svg';
+import first3 from '../../../assets/fashion-blog/featurePosts/image3.webp';
 
 const posts = [
   {
