@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './FashionBlog.module.scss';
-import bag from '../../../assets/fashion-blog/bag.png';
-import sneaker from '../../../assets/fashion-blog/sneaker.png';
+import bag from '../../../assets/fashion-blog/bag.webp';
+import sneaker from '../../../assets/fashion-blog/sneaker.webp';
 import ShopButton from '../../../components/UI/ShopButton/ShopButton';
 import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 

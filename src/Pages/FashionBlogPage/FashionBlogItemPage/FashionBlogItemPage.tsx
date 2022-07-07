@@ -6,7 +6,7 @@ import { IFashionBlogData } from '../../../types/types';
 import styles from './FashionBlogItemPage.module.scss';
 import first from '../../../assets/fashion-blog/featurePosts/image.svg';
 import first2 from '../../../assets/fashion-blog/featurePosts/image2.svg';
-import first3 from '../../../assets/fashion-blog/featurePosts/image3.svg';
+import first3 from '../../../assets/fashion-blog/featurePosts/image3.webp';
 import FeaturedPostsSlider from '../FeaturedPostsSlider/FeaturedPostsSlider';
 import SocialNetworks from '../SocialNetworks/SocialNetworks';
 import TopPanel from '../../../components/UI/TopPanel/TopPanel';
