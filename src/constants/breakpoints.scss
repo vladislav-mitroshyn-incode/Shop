@@ -1,20 +1,5 @@
 @import './windowWidths.scss';
 
-//$mobile: 'max-width $mobile ;
 @mixin breakpoints($media) {
-  @if $media == mobile-bp {
-    @media only screen and (max-width: 375px) { @content; }
-  }
-  @else if $media == xs-bp {
-    @media only screen and (max-width: 575px) { @content; }
-  }
-  @else if $media == tablet-bp {
-    @media only screen and (max-width: 767px) { @content; }
-  }
-  @else if $media == laptop-bp {
-    @media only screen and (max-width: 991px) { @content; }
-  }
-  @else if $media == desktop-bp {
-    @media only screen and (max-width: 1259px) { @content; }
-  }
+  @media only screen and (max-width: $media) { @content; }
 }
