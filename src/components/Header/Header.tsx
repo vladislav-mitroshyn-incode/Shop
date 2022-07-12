@@ -55,6 +55,9 @@ const Header = () => {
               <div />
               <input type="button" className={styles.button__cart} />
             </div>
+            <a href="" className={styles.button__icon_menu}>
+              <span> </span>
+            </a>
           </div>
         </div>
       </ContainerComponent>
