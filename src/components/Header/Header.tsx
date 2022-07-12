@@ -54,10 +54,10 @@ const Header = () => {
               <input type="button" className={styles.button__heart} />
               <div />
               <input type="button" className={styles.button__cart} />
+              <a href="" className={styles.button__icon_menu}>
+                <span> </span>
+              </a>
             </div>
-            <a href="" className={styles.button__icon_menu}>
-              <span> </span>
-            </a>
           </div>
         </div>
       </ContainerComponent>
