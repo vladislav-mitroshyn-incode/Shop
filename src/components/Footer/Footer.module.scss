@@ -9,6 +9,8 @@
 .footer{
   background: $ColorGray900;
 
+  a{text-decoration: none;}
+
   .footer__body{
     display: flex;
     padding: 60px 0 40px 0;
@@ -16,7 +18,6 @@
     .footer__item{
       .item__link .link__title a{
         @extend %stylesLine;
-        text-decoration: none;
       }
     }
     .contacts__item{
@@ -80,7 +81,6 @@
         }
       }
       .copyright__link > a{
-        text-decoration: none;
         @extend %stylesLine;
       }
     }
