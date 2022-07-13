@@ -12,7 +12,7 @@
     height: 650px;
   }
   @include breakpoints($tablet-bp) {
-    height: 520px;
+    height: 550px;
   }
 
   .slider__body{
@@ -21,6 +21,11 @@
     .slider__content{
       .slider__button_primary{
         margin-left: 24px;
+
+        @include breakpoints($xs-bp) {
+          margin: 24px 0 0 0;
+          display: block;
+        }
       }
       div{
         color: $ColorGray900;
