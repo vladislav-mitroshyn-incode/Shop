@@ -16,7 +16,6 @@
     .footer__item{
       .item__link .link__title a{
         @extend %stylesLine;
-        text-decoration: none;
       }
     }
     .contacts__item{
@@ -80,7 +79,6 @@
         }
       }
       .copyright__link > a{
-        text-decoration: none;
         @extend %stylesLine;
       }
     }
