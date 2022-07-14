@@ -1,26 +1,59 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants//windowWidths.scss';
 
 .cards{
   margin: -60px 0 180px 0;
 
+  @include breakpoints($laptop-bp) {
+    margin: -60px 0 120px 0;
+  }
+  @include breakpoints($tablet-bp) {
+    margin: -60px 0 100px 0;
+  }
+
   .cards__list{
     display: flex;
-    gap: 30px;
+    margin: 0 -15px;
+
+    @include breakpoints($tablet-bp) {
+      flex-direction: column;
+    }
+    @include breakpoints($tablet-bp) {
+      margin: -15px 0;
+    }
     
     .card__item {
+      margin: 0 15px;
       transition: transform .2s;
+
       &:hover{
         transform: scale(1.2);
       }
-    }
-    .card__item p{
-      margin: 16px 0 0 0;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 150%;
-      color: $ColorGray800;
-      text-align: center;
+      p{
+        margin: 16px 0 0 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: $ColorGray800;
+        text-align: center;
+      }
+      @include breakpoints($desktop-bp) {
+        flex: 0 1 33%;
+        img {
+          width: 100%;
+        }
+      }
+      @include breakpoints($tablet-bp) {
+        margin: 15px 0;
+        img{
+          display: block;
+          max-width: 290px;
+          max-height: 290px;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

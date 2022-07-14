@@ -1,34 +1,61 @@
 @import '../../../constants/colors.scss';
 @import '../../../constants/buttons.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants//windowWidths.scss';
 
 .slider{
-    background: url('../../../assets/slider/bg.webp') center;
-    height: 800px;
+  background: url('../../../assets/slider/bg.webp') center no-repeat;
+  background-size: cover;
+  height: 800px;
 
-    .slider__body{
-        padding: 150px 0 0 0 ;
+  @include breakpoints($desktop-bp) {
+    height: 650px;
+  }
+  @include breakpoints($tablet-bp) {
+    height: 550px;
+  }
 
-        .slider__content{
-            .slider__button_primary{
-                margin-left: 24px;
-            }
+  .slider__body{
+    padding: 150px 0 0 0 ;
+
+    .slider__content{
+      .slider__button_primary{
+        margin-left: 24px;
+
+        @include breakpoints($xs-bp) {
+          margin: 24px 0 0 0;
+          display: block;
         }
-        .slider__content div{
-            color: $ColorGray900;
-            font-weight: 700;
-            font-size: 18px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
+      }
+      div{
+        color: $ColorGray900;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        @include breakpoints($desktop-bp) {
+          font-size: 16px;
         }
-        .slider__content h1{
-            padding: 0;
-            color: $ColorGray900;
-            font-weight: 900;
-            font-size: 72px;
-            line-height: 130%;
-            margin: 12px 0 60px 0;
+        @include breakpoints($tablet-bp) {
+          font-size: 14px;
         }
+      }
+      h1{
+        padding: 0;
+        color: $ColorGray900;
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 130%;
+        margin: 12px 0 60px 0;
+        @include breakpoints($desktop-bp) {
+          font-size: 52px;
+        }
+        @include breakpoints($tablet-bp) {
+          font-size: 42px;
+        }
+      }
     }
+  }
 }
 
