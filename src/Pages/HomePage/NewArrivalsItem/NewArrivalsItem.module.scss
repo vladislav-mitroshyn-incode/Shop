@@ -1,17 +1,33 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants/windowWidths.scss';
 
 .newArrivals__cards{
   margin: 0 0 100px 0px;
 
+  @include breakpoints($laptop-bp) {
+    margin: 0 0 50px 0px;
+  }
   .newArrivals__card{
   
-
     .newArrivals__content{
       margin: 0 15px 0 15px;
+
+      @include breakpoints($tablet-bp) {
+        margin: 15px 0 15px 0;
+      }
 
       .newArrivals__image {
         max-width: 310px;
         height: 320px;
+
+        @include breakpoints($tablet-bp) {
+          margin: 0 auto;
+        }
+        @include breakpoints($laptop-bp) {
+          max-width: 280px;
+          height: 320px;
+        }
       }
       .newArrivals__image img {
         width: 100%;
@@ -20,6 +36,10 @@
       }
       .newArrivals__subtitle{
         padding: 16px 0 0 16px;
+
+        @include breakpoints($tablet-bp) {
+          text-align: center;
+        }
         
         .newArrivals__title{
           color: $ColorGray800;
@@ -43,6 +63,10 @@
     justify-content: center;
     margin: 90px 40px 90px 0 ;
     text-align: center;
+
+    @include breakpoints($tablet-bp) {
+      margin: 50px 40px 50px 0 ;
+    }
   }
   .my__dots li button {
     height: 2px;
@@ -52,6 +76,13 @@
     outline: none;
     background: #B3B7BC; 
     cursor: pointer;
+
+    @include breakpoints($tablet-bp) {
+      width: 20px;
+    }
+    @include breakpoints($xs-bp) {
+      width: 15px;
+    }
   }
 }
 .my__dots :global(li.slick-active) button {

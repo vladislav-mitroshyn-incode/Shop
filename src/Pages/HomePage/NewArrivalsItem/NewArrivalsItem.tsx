@@ -7,6 +7,18 @@ interface NewArrivalsItemProps {
   data: IArrivalData[];
 }
 
+interface IResponseSettingsProp {
+  slidesToShow: number;
+  slidesToScroll: number;
+  vertical?: boolean;
+  verticalSwiping?: boolean;
+}
+
+interface IResponseProp {
+  breakpoint: number;
+  settings: IResponseSettingsProp;
+}
+
 interface SettingsProp {
   infinite: boolean;
   dots: boolean;
@@ -15,6 +27,7 @@ interface SettingsProp {
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
+  responsive: IResponseProp[];
 }
 
 const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
@@ -26,6 +39,31 @@ const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          vertical: true,
+          verticalSwiping: true,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1259,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+    ],
   };
   return (
     <div className={styles.newArrivals__cards}>
