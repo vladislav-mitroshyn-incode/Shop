@@ -27,3 +27,12 @@ export interface IFashionBlogData {
   subTitle: string;
   img: string;
 }
+
+export interface IResponseProp {
+  breakpoint: number;
+  settings: {
+    slidesToShow: number;
+    slidesToScroll: number;
+    dots?: boolean;
+  };
+}

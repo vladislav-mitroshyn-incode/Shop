@@ -1,21 +1,10 @@
 import React, { FC } from 'react';
 import Slider from 'react-slick';
 import styles from './NewArrivalsItem.module.scss';
-import { IArrivalData } from '../../../types/types';
+import { IArrivalData, IResponseProp } from '../../../types/types';
 
 interface NewArrivalsItemProps {
   data: IArrivalData[];
-}
-
-interface IResponseSettingsProp {
-  slidesToShow: number;
-  slidesToScroll: number;
-  dots?: boolean;
-}
-
-interface IResponseProp {
-  breakpoint: number;
-  settings: IResponseSettingsProp;
 }
 
 interface SettingsProp {
