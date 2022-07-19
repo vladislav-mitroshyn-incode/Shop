@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 import { getFashionBlogsData } from '../../../services';
-import { IFashionBlogData } from '../../../types/types';
+import { IFashionBlogData } from '../../../types';
 import styles from './FashionBlogItemPage.module.scss';
 import first from '../../../assets/fashion-blog/featurePosts/image.svg';
 import first2 from '../../../assets/fashion-blog/featurePosts/image2.svg';

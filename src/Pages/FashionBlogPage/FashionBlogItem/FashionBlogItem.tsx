@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './FashionBlogItem.module.scss';
 import { getFashionBlogsData } from '../../../services';
-import { IFashionBlogData } from '../../../types/types';
+import { IFashionBlogData } from '../../../types';
 
 const FashionBlogItem = () => {
   const [data, setData] = useState<IFashionBlogData[]>([]);

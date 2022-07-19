@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import styles from './NewArrivals.module.scss';
-import { IArrivalData } from '../../../types/types';
+import { IArrivalData } from '../../../types';
 import NewArrivalsItem from '../NewArrivalsItem/NewArrivalsItem';
 import { getNewArrivalsData } from '../../../services';
 import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';

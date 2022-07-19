@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Slider from 'react-slick';
 import styles from './NewArrivalsItem.module.scss';
-import { IArrivalData, IResponseProp } from '../../../types/types';
+import { IArrivalData, IResponseProp } from '../../../types';
 
 interface NewArrivalsItemProps {
   data: IArrivalData[];

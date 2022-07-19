@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { ITrandingData } from '../../../types/types';
+import { ITrandingData } from '../../../types';
 import styles from './TrandingNowItem.module.scss';
 
 interface TrandingNowItemProps {
