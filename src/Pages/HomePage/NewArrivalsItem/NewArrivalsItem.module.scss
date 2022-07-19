@@ -18,15 +18,13 @@
       }
 
       .newArrivals__image {
-        max-width: 310px;
+        flex: 0 1 auto;
         height: 320px;
 
         @include breakpoints($tablet-bp) {
-          margin: 0 auto;
-        }
-        @include breakpoints($laptop-bp) {
           max-width: 280px;
           height: 320px;
+          margin: 0 auto;
         }
       }
       .newArrivals__image img {
@@ -76,13 +74,6 @@
     outline: none;
     background: #B3B7BC; 
     cursor: pointer;
-
-    @include breakpoints($tablet-bp) {
-      width: 20px;
-    }
-    @include breakpoints($xs-bp) {
-      width: 15px;
-    }
   }
 }
 .my__dots :global(li.slick-active) button {

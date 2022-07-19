@@ -10,8 +10,7 @@ interface NewArrivalsItemProps {
 interface IResponseSettingsProp {
   slidesToShow: number;
   slidesToScroll: number;
-  vertical?: boolean;
-  verticalSwiping?: boolean;
+  dots?: boolean;
 }
 
 interface IResponseProp {
@@ -43,10 +42,9 @@ const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          vertical: true,
-          verticalSwiping: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
         },
       },
       {
