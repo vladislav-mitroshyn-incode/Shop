@@ -1,13 +1,29 @@
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants//windowWidths.scss';
+
 .collections{
   padding: 90px 15px;
+
+  @include breakpoints($laptop-bp) {
+    padding: 50px 15px;
+  }
 
   .collections__content{
     display: flex;
     margin-bottom: 15px;
+
+    @include breakpoints($desktop-bp) {
+      flex-direction: column;
+      margin: 0;
+    }
     
     .collections__body{
       height: 500px;
       margin: 0 7.5px 0 15px;
+
+      @include breakpoints($desktop-bp) {
+        margin: 7.5px 0 15px 0;
+      }
 
       .collections__title{
         padding: 60px;
@@ -19,12 +35,20 @@
         line-height: 150%;
         letter-spacing: 1px;
         text-transform: uppercase;
+
+        @include breakpoints($laptop-bp) {
+          font-size: 12px;
+        }
       }
       .collections__title h1{
         margin: 12px 0 0 0;
         font-weight: 900;
         font-size: 32px;
         line-height: 130%;
+
+        @include breakpoints($laptop-bp) {
+          font-size: 25px;
+        }
       }
     }
     .collections__body.body{
@@ -47,13 +71,22 @@
       flex: 0 1 40%;
       background: url('../../../assets/collections/image4.png') no-repeat;
       background-size: cover;
+      overflow: hidden;
+    }
+    .collections__body.body,
+    .collections__body.body2,
+    .collections__body.body3,
+    .collections__body.body4 {
+      @include breakpoints($desktop-bp) {
+        border-radius: 10px;
+      }
     }
     .collections__body.body4 span{
       position: absolute;
       right: 0;
-      height: 380px;
       width: 430px;
-      background: url('../../../assets/collections/image5.svg') no-repeat;
+      height: 380px;
+      content: url('../../../assets/collections/image5.svg');
     }
   }
 }
