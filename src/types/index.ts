@@ -34,5 +34,7 @@ export interface IResponseProp {
     slidesToShow: number;
     slidesToScroll: number;
     dots?: boolean;
+    arrows?: boolean;
+    infinite?: boolean;
   };
 }

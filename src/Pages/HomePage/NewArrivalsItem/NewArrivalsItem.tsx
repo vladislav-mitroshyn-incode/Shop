@@ -20,9 +20,9 @@ interface SettingsProp {
 
 const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
   const settings: SettingsProp = {
-    infinite: false,
+    infinite: true,
     dots: true,
-    arrows: false,
+    arrows: true,
     dotsClass: styles.my__dots,
     speed: 500,
     slidesToShow: 6,
@@ -34,6 +34,8 @@ const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
+          arrows: true,
+          infinite: true,
         },
       },
       {

@@ -4,6 +4,7 @@
 
 .newArrivals__cards{
   margin: 0 0 100px 0px;
+  position: relative;
 
   @include breakpoints($laptop-bp) {
     margin: 0 0 50px 0px;
@@ -79,6 +80,41 @@
 .my__dots :global(li.slick-active) button {
   background: #424551;
 }
+
+
+@include breakpoints($tablet-bp) {
+  %slickButtons{
+    font-family: none;
+    color: white;
+    height: 40px;
+    background-color: #424551;
+    padding: 7px;
+    border-radius: 50%;
+  }
+  
+  .newArrivals__cards :global(.slick-arrow) {
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .newArrivals__cards :global(.slick-prev:before) {
+    @extend %slickButtons;
+  }
+  
+  .newArrivals__cards :global(.slick-arrow.slick-next) {
+    right: 30px;
+  }
+  .newArrivals__cards :global(.slick-arrow.slick-prev) {
+    left: 15px;
+  }
+  .newArrivals__cards :global(.slick-next:before) {
+    @extend %slickButtons;
+  }
+}
+
+
+
+
 
 
 
