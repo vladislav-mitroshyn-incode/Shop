@@ -1,14 +1,30 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants//windowWidths.scss';
 
 .popularCategories__content{
   display: flex;
   justify-content: center;
 
+  @include breakpoints($tablet-bp) {
+    flex-direction: column;
+  }
+
   .popularCategories__body{
     margin: 0 15px;
 
-    .body__image{
-      
+    @include breakpoints($tablet-bp) {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .body__image img{
+      @include breakpoints($desktop-bp) {
+        width: 100%;
+      }
+      @include breakpoints($tablet-bp) {
+        width: 230px;
+      }
     }
     .body__name{
       font-weight: 700;
@@ -17,6 +33,10 @@
       margin-top: 24px;
       text-align: center;
       color: $ColorGray900;
+
+      @include breakpoints($laptop-bp) {
+        font-size: 17px;
+      }
     }
   }
 }
