@@ -1,4 +1,6 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/windowWidths.scss';
+@import '../../../constants/breakpoints.scss';
 
 %slickButtons{
   content: url('../../../assets/slider-tranding/arrowRight.png');
@@ -16,59 +18,98 @@
 }
 
 .tranding__card{
+  
+  .card__content{
 
-  .card__image{
-    width: 380px;
-    height: 420px
-  }
-  .card__image img{
-    max-width: 100%;
-    height: 100%;
-  }
-  .card__subtitle{
-    padding: 16px 0 0 16px;
+    .card__body{
+      margin: 0 15px 0 15px;
 
-    .card__title{
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 150%;
-      color: $ColorGray800;
-      margin-bottom: 8px;
-    }
-    .card__price{
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 130%;
-      color: $ColorGray900;
+      @include breakpoints($desktop-bp) {
+        text-align: center;
+      }
+
+      .card__image{
+        flex: 0 1 auto;
+        height: 420px;
+
+        @include breakpoints($desktop-bp) {
+          max-width: 360px;
+          margin: 0 auto;
+        }
+        @include breakpoints($laptop-bp) {
+          width: 360px;
+        }
+        @include breakpoints($xs-bp) {
+          width: 300px;
+        }
+      }
+      .card__image img{
+        width: 100%;
+        height: 100%;
+      }
+      .card__subtitle{
+        padding: 16px 0 0 16px;
+
+        .card__title{
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 150%;
+          color: $ColorGray800;
+          margin-bottom: 8px;
+        }
+        .card__price{
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 130%;
+          color: $ColorGray900;
+        }
+      }
     }
   }
 }
 .tranding__card :global(.slick-arrow) {
 	position: absolute;
 	top: -55px;
+
+  @include breakpoints($desktop-bp) {
+    top: 40%;
+    z-index: 9;
+  }
 }
 
 .tranding__card :global(.slick-arrow.slick-prev) {
 	left: 91%;
+
+  @include breakpoints($desktop-bp) {
+    left: 25px;
+  }
 }
 .tranding__card :global(.slick-prev:before) {
   @extend %slickButtons;
   position: absolute;
-  bottom: -12px;
+  bottom: -11px;
   right: -10px;
   transform: rotate(-180deg);
-	padding: 6px 9px 5px 9px;
+	padding: 6px 8px 4px 8px;
 }
 .tranding__card :global(.slick-prev.slick-disabled:before) {
   @extend %slickButtonsDisabled;
-  bottom: -7px;
+  bottom: -6px;
   right: -10px;
   transform: none !important;
-}
 
+  @include breakpoints($desktop-bp) {
+    bottom: -5px;
+    right: 5px;
+  }
+}
 .tranding__card :global(.slick-arrow.slick-next) {
 	right: 4%;
 	height: 22px;
+
+  @include breakpoints($desktop-bp) {
+    right: 35px;
+  }
 }
 .tranding__card :global(.slick-next:before) {
   @extend %slickButtons;

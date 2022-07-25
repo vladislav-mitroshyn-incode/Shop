@@ -1,4 +1,6 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/windowWidths.scss';
+@import '../../../constants/breakpoints.scss';
 
 .tranding{
 	margin: 90px 0 0 0;
@@ -13,10 +15,21 @@
 			font-size: 46px;
 			line-height: 130%;
 			color: $ColorGray900;
+
+			@include breakpoints($laptop-bp) {
+        font-size: 40px;
+      }
+			@include breakpoints($tablet-bp) {
+        font-size: 35px;
+      }
 		}
 		.tranding__btn{
 			padding: 80px 0;
 			text-align: center;
+
+			@include breakpoints($desktop-bp) {
+				padding: 120px 0;
+			}
 		}
 	}
 }
