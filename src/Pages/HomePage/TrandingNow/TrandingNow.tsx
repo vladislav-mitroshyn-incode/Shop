@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getTrandingNowData } from '../../../services';
-import { ITrandingData } from '../../../types/types';
+import { ITrandingData } from '../../../types';
 import TrandingNowItem from '../TrandingNowItem/TrandingNowItem';
 import ShopButton from '../../../components/UI/ShopButton/ShopButton';
 import styles from './TrandingNow.module.scss';

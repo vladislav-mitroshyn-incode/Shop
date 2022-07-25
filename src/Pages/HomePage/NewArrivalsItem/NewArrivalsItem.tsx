@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Slider from 'react-slick';
 import styles from './NewArrivalsItem.module.scss';
-import { IArrivalData } from '../../../types/types';
+import { IArrivalData, IResponseProp } from '../../../types';
 
 interface NewArrivalsItemProps {
   data: IArrivalData[];
@@ -15,17 +15,44 @@ interface SettingsProp {
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
+  responsive: IResponseProp[];
 }
 
 const NewArrivalsItem: FC<NewArrivalsItemProps> = ({ data }) => {
   const settings: SettingsProp = {
-    infinite: false,
+    infinite: true,
     dots: true,
-    arrows: false,
+    arrows: true,
     dotsClass: styles.my__dots,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1259,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+    ],
   };
   return (
     <div className={styles.newArrivals__cards}>

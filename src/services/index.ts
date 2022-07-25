@@ -1,11 +1,5 @@
 import { productsUtl, trandingsUtl, categoriesUtl, fashionBlogsUtl } from '../assets/urls';
-import {
-  IArrivalData,
-  ITrandingData,
-  ICategoriesData,
-  IPopularCategoriesData1,
-  IFashionBlogData,
-} from '../types/types';
+import { IArrivalData, ITrandingData, ICategoriesData, IPopularCategoriesData1, IFashionBlogData } from '../types';
 
 export const getNewArrivalsData = async () => {
   const { newArrivals }: { newArrivals: IArrivalData[] } = await ApiService.get(productsUtl);

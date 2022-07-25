@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { ITrandingData } from '../../../types/types';
+import { ITrandingData } from '../../../types';
 import styles from './TrandingNowItem.module.scss';
 
 interface TrandingNowItemProps {
@@ -10,7 +10,7 @@ interface TrandingNowItemProps {
 interface SettingsProp {
   infinite: boolean;
   dots: boolean;
-  arrow: boolean;
+  arrows: boolean;
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
@@ -20,7 +20,7 @@ const TrandingNowItem: React.FC<TrandingNowItemProps> = ({ data }) => {
   const settings: SettingsProp = {
     infinite: false,
     dots: false,
-    arrow: true,
+    arrows: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
