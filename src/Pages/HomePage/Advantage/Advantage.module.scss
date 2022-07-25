@@ -78,8 +78,11 @@
         line-height: 150%;
         color: $ColorGray900;
 
-				@include breakpoints($laptop-bp) {
+				@include breakpoints($desktop-bp) {
 					font-size: 18px;
+				}
+				@include breakpoints($laptop-bp) {
+					font-size: 16px;
 				}
       }
       .card__content p {
@@ -89,6 +92,9 @@
         line-height: 160%;
         color: $ColorGray500;
 
+				@include breakpoints($desktop-bp) {
+					font-size: 15px;
+				}
 				@include breakpoints($laptop-bp) {
 					font-size: 14px;
 				}
