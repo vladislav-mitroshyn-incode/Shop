@@ -46,8 +46,16 @@
         font-size: 32px;
         line-height: 130%;
 
+        @include breakpoints($desktop-bp) {
+          height: 84px;
+        }
         @include breakpoints($laptop-bp) {
+          height: 65px;
           font-size: 25px;
+        }
+        @include breakpoints($xs-bp) {
+          height: 52px;
+          font-size: 20px;
         }
       }
     }
