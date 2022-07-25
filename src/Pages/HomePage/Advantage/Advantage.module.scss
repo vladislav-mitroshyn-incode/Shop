@@ -1,54 +1,98 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants//windowWidths.scss';
 
-.advantage{
-	margin: 90px 0;
+.advantage {
+  margin: 90px 0;
 
-	.advantage__content{
-		display: flex;
+  .advantage__content {
+    display: flex;
 
-		.advantage__card{
-			position: relative;
-			flex: 0 1 100%;
-			padding: 0 45px ;
-			text-align: center;
+    @include breakpoints($tablet-bp) {
+      display: block;
+    }
+    .advantage__card {
+      position: relative;
+      flex: 0 1 100%;
+      padding: 0 45px;
+      text-align: center;
+			
+			@include breakpoints($laptop-bp) {
+        padding: 0 25px;
+      }
+      @include breakpoints($tablet-bp) {
+        max-width: 70%;
+        padding-bottom: 25px;
+        margin: 0 auto;
+        border-bottom: 1px solid $ColorGray300;
+      }
 
-			&:nth-child(4){
-				padding: 0 0 0 45px;
+			&:first-child {
+        padding: 0 45px 0 0;
+
+				@include breakpoints($laptop-bp) {
+					padding: 0 25px 0 0;
+				}
+      }
+      &:last-child {
+        padding: 0 0 0 45px;
+				
+				@include breakpoints($laptop-bp) {
+					padding: 0 0 0 25px;
+				}
+      }
+			&:first-child,
+			&:last-child {
+				@include breakpoints($tablet-bp) {
+          max-width: 70%;
+					padding: 0 25px 25px 25px;
+					margin: 0 auto;
+					border-bottom: 1px solid $ColorGray300;
+        }
 			}
-			&:nth-child(1){
-				padding: 0 45px 0 0 ;
-			}
-			&::after{
-				content: '';
-				position: absolute;
-				display: block;
-				width: 1px;
-				height: 100%;
-				right: 0;
-				top: 0;
-				background: linear-gradient(to top, white, #DADBDD, white);  
-			}
-			&:last-child::after{
-				background: none; 
-			}
-			.card__image{
-				margin: 24px 0;
-				text-align: center;
-			}				
-			.card__content h1{
-				margin: 0 0 9px 0;
-				font-weight: 700;
-				font-size: 20px;
-				line-height: 150%;
-				color: $ColorGray900;
-			}
-			.card__content p{
-				margin: 0;
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 160%;
-				color: $ColorGray500;
-			}
-		}
-	}		
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: linear-gradient(to top, white, #dadbdd, white);
+
+        @include breakpoints($tablet-bp) {
+          content: none;
+        }
+      }
+      &:last-child::after {
+        background: none;
+      }
+      .card__image {
+        margin: 24px 0;
+        text-align: center;
+      }
+      .card__content h1 {
+        margin: 0 0 9px 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: $ColorGray900;
+
+				@include breakpoints($laptop-bp) {
+					font-size: 18px;
+				}
+      }
+      .card__content p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: $ColorGray500;
+
+				@include breakpoints($laptop-bp) {
+					font-size: 14px;
+				}
+      }
+    }
+  }
 }
