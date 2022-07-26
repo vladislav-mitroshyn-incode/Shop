@@ -1,4 +1,6 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants/windowWidths.scss';
 
 .fashionBlog{
   margin: 90px 0;
@@ -16,15 +18,26 @@
         font-size: 46px;
         line-height: 130%;
         color: $ColorGray900;
+
+        @include breakpoints($laptop-bp) {
+          font-size: 40px;
+        }
+        @include breakpoints($tablet-bp) {
+          font-size: 30px;
+        }
       }
     }
   }
 
   .fashionBlog__content{
     display: flex;
+    justify-content: space-between;
 
+    @include breakpoints($laptop-bp) {
+      flex-direction: column;
+    }
     .fashionBlog__blog{
-      flex: 0 1 600px;
+      flex: 0 1 47%;
       border-radius: 4px;
       box-shadow: 0px 80px 80px -20px 
         rgba(154, 156, 165, 0.08), 
@@ -35,6 +48,15 @@
         0px 4px 4px -4px 
         rgba(30, 33, 44, 0.03);
 
+      @include breakpoints($laptop-bp) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      &:first-child{
+        @include breakpoints($laptop-bp) {
+          margin: 0 auto 45px auto;
+        }
+      }
       &:hover{
         border-radius: 4px;
         box-shadow: 0px 80px 80px -20px 
@@ -49,11 +71,14 @@
           color: $ColorPrimary;
         }
       }
+      .blog__image{
 
-      &:first-child{
-        margin: 0 30px 0 0;
+        img{
+          @include breakpoints($desktop-bp) {
+            width: 100%;
+          }
+        }
       }
-
       .blog__body {
         margin: 24px 24px;
 
@@ -63,6 +88,10 @@
           line-height: 150%;
           margin: 0 0 12px 0;
           color: $ColorGray900;
+
+          @include breakpoints($xs-bp) {
+            font-size: 17px;
+          }
         }
         .blog__info{
           span{
@@ -98,6 +127,10 @@
           font-size: 16px;
           line-height: 160%;
           color: $ColorGray800;
+
+          @include breakpoints($xs-bp) {
+            font-size: 14px;
+          }
         }
       }
     }
