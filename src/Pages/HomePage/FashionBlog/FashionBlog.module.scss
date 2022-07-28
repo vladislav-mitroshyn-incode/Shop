@@ -30,6 +30,17 @@
         @include breakpoints($tablet-bp) {
           font-size: 30px;
         }
+        @include breakpoints($xs-bp) {
+          font-size: 25px;
+        }
+      }
+      .title__btn{
+        button{
+          @include breakpoints($xs-bp) {
+            font-size: 14px;
+            padding: 15px 30px;
+          }
+        }
       }
     }
   }
