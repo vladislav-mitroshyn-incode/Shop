@@ -72,12 +72,12 @@
     color: transparent;
     border: 0;
     outline: none;
-    background: #B3B7BC; 
+    background: $ColorGray500;  
     cursor: pointer;
   }
 }
 .my__dots :global(li.slick-active) button {
-  background: #424551;
+  background: $ColorGray800;
 }
 
 @include breakpoints($tablet-bp) {
