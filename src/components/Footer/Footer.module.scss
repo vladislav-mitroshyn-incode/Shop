@@ -1,4 +1,6 @@
 @import '../../constants/colors.scss';
+@import '../../constants/breakpoints.scss';
+@import '../../constants/windowWidths.scss';
 
 %stylesLine{
   font-size: 16px;
@@ -13,12 +15,39 @@
     display: flex;
     padding: 60px 0 40px 0;
 
+    @include breakpoints($desktop-bp) {
+      justify-content: center;
+    }
+    @include breakpoints($tablet-bp) {
+      flex-wrap: wrap ;
+    }
+
     .footer__item{
+      flex: 0 1 auto;
+
+      @include breakpoints($tablet-bp) {
+        flex: 0 1 50%;
+        margin: 0;
+      }
       .item__link .link__title a{
         @extend %stylesLine;
+
+        @include breakpoints($laptop-bp) {
+          font-size: 14px;
+        }
       }
     }
     .contacts__item{
+      
+      @include breakpoints($tablet-bp) {
+        flex: 0 1 50%;
+        margin: 20px 0 0 0
+      }
+      @include breakpoints($tablet-bp) {
+        flex: 0 1 50%;
+        margin: 20px 0 0 0
+      }
+
       .contacts__body .contacts__title span{
         &:first-child{
           font-size: 16px;
@@ -32,24 +61,51 @@
       
       .contacts__img{
         margin-top: 24px;
-      }
-      .contacts__img > img{
-        margin-left: 12px;
-        &:first-child{
-          margin: 0;
+
+        @include breakpoints($xs-bp) {
+          width: 220px;
+        }
+        img{
+          margin-left: 12px;
+
+          &:first-child{
+            margin: 0;
+          }
         }
       }
     }
-    .download__item div{
-      padding: 12px 0 0 0;
+    .download__item {
 
-      img:nth-child(2){
-        margin: 0 0 0 20px;
+      @include breakpoints($tablet-bp) {
+        flex: 0 1 50%;
+        margin: 20px 0 0 0;
+      }
+
+      div {
+        padding: 12px 0 0 0;
+
+        img{
+          &:last-child{
+            margin: 0 0 0 20px;
+  
+            @include breakpoints($desktop-bp) {
+              display: block;
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }
   .footer__body > div{
     margin-left: 150px;
+
+    @include breakpoints($desktop-bp) {
+      margin-left: 115px;
+    }
+    @include breakpoints($laptop-bp) {
+      margin-left: 50px;
+    }
   }
   .footer__body > div:first-child{
     margin-left: 0;
@@ -61,15 +117,18 @@
       padding: 24px 0 32px 0;
       display: flex;
       justify-content: space-between;
+
       p{
         font-size: 12px;
         color: $ColorWhite;
         margin: 0;
         opacity: 0.7;
         text-transform: none;
+
         span{
           position: relative;
           margin-left: 18px;
+
           &::before{
             position: absolute;
             content: url('../../assets/footer/hart.svg');
@@ -80,6 +139,10 @@
       }
       .copyright__link > a{
         @extend %stylesLine;
+
+        @include breakpoints($xs-bp) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -90,6 +153,10 @@
   color: $ColorWhite;
   text-transform: uppercase;
   margin: 0 0 12px 0;
+
+  @include breakpoints($laptop-bp) {
+    font-size: 14px;
+  }
 }
 .footer :global(ul){
   padding: 0;
