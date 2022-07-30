@@ -102,12 +102,12 @@
           &::after,
           &::before{
             content: '';
-            background-color: #000;
+            background-color: $ColorBlack;
             height: 2px;
           }
           span{
             height: 2px;
-            background-color: #000;
+            background-color: $ColorBlack;
           }
         }
       }
