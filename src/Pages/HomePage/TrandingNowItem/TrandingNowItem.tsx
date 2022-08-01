@@ -33,13 +33,6 @@ const TrandingNowItem: React.FC<TrandingNowItemProps> = ({ data }) => {
           slidesToScroll: 1,
         },
       },
-      // {
-      //   breakpoint: 991,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //   },
-      // },
       {
         breakpoint: 1259,
         settings: {
@@ -52,8 +45,8 @@ const TrandingNowItem: React.FC<TrandingNowItemProps> = ({ data }) => {
   return (
     <Slider className={styles.tranding__card} {...settings}>
       {data.map((card, index) => (
-        <div className={styles.card__content}>
-          <div className={styles.card__body} key={index}>
+        <div key={index} className={styles.card__content}>
+          <div className={styles.card__body}>
             <div className={styles.card__image}>
               <img src={card.image} alt={card.title} />
             </div>
