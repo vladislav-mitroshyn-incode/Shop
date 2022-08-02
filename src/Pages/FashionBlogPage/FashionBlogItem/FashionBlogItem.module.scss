@@ -1,10 +1,11 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants/windowWidths.scss';
 
 .fashionBlog__blog{
-  flex: 0 1 600px;
+  flex: 0 1 100%;
   border-radius: 4px;
   margin: 0 0 60px 0;
-
 
   &:first-child{
     margin: 0 30px 0 0;
@@ -16,20 +17,36 @@
   }
 
   .blog__image img{
-    width: 810px;
+    width: 100%;
     height: 360px;
     border-radius: 4px;
+
+    @include breakpoints($laptop-bp) {
+      object-fit: cover;
+    }
+    @include breakpoints($tablet-bp) {
+      height: 300px;
+    }
+    @include breakpoints($xs-bp) {
+      height: 240px;
+    }
   }
   .blog__body {
     margin: 16px 0 0 0;
 
     h2{
-      font-weight: 700;
       font-size: 20px;
       line-height: 150%;
       margin: 8px 0 8px 0;
       color: $ColorGray900;
       cursor: pointer;
+
+      @include breakpoints($tablet-bp) {
+        font-size: 17px;
+      }
+      @include breakpoints($xs-bp) {
+        font-size: 14px;
+      }
     }
     .blog__info{
       span{
@@ -39,8 +56,17 @@
         line-height: 150%;
         color: $ColorGray500;
 
+        @include breakpoints($xs-bp) {
+          font-size: 13px;
+          padding: 0 8px;
+        }
+
         &:first-child{
           padding: 0 12px 0 0;
+
+          @include breakpoints($xs-bp) {
+            padding: 0 8px 0 0;
+          }
         }
         &::after{
           position: absolute;
@@ -48,13 +74,18 @@
           width: 1px;
           height: 12px;
           right: 0;
-          top: 1px;
+          top: 3px;
           background: $ColorGray500;
         }
         &:last-child{
           padding: 0 0 0 36px;
           background: url('../../../assets/fashion-blog/Chat.svg') no-repeat;
           background-position: bottom 1px left 12px ;
+
+          @include breakpoints($xs-bp) {
+            padding: 0 0 0 28px;
+            background-position: bottom 1px left 8px ;
+          }
         }
         &:last-child:after{
           background: none;
@@ -66,6 +97,14 @@
       font-size: 16px;
       line-height: 160%;
       color: $ColorGray800;
+
+      @include breakpoints($tablet-bp) {
+        font-size: 15px;
+      }
+      @include breakpoints($xs-bp) {
+        font-size: 14px;
+        line-height: 140%;
+      }
     }
   }
 }

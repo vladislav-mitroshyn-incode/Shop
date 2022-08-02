@@ -29,7 +29,7 @@ const FeaturedPosts = () => {
         <h1>Featured Posts</h1>
         {posts.map((post, index) => (
           <div key={index} className={styles.post__body}>
-            <div>{post.img}</div>
+            <div className={styles.post__img}>{post.img}</div>
             <div className={styles.post__title}>
               <p>{`${post.data.month} ${post.data.day}, ${post.data.year}`}</p>
               <p>{post.title}</p>

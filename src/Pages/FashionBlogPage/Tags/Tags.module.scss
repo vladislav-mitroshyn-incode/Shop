@@ -1,4 +1,6 @@
 @import '../../../constants/colors.scss';
+@import '../../../constants/breakpoints.scss';
+@import '../../../constants/windowWidths.scss';
 
 .tag{
   margin: 32px 0;
@@ -13,13 +15,17 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include breakpoints($laptop-bp) {
+      justify-content: center;
+    }
+
     .tag__body{
       margin: 12px 12px 0 0;
       padding: 6px 8px;
       border: 1px solid $ColorGray500;
       border-radius: 4px;
       cursor: pointer;
-  
+
       span{
         font-weight: 700;
         font-size: 14px;
