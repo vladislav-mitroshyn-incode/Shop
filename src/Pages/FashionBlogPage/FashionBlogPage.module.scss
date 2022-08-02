@@ -1,5 +1,6 @@
 @import '../../constants/colors.scss';
-
+@import '../../constants/breakpoints.scss';
+@import '../../constants/windowWidths.scss';
 
 .fashionBlog{
 
@@ -7,9 +8,22 @@
     display: flex;
     overflow: hidden;
 
+    @include breakpoints($laptop-bp) {
+      flex-direction: column;
+    }
+
     .fashionBlog__fashion{
       flex: 0 1 810px;
       margin: 0 78px 90px 0;
+
+      @include breakpoints($laptop-bp) {
+        width: 85%;
+        margin: 0 auto 60px auto;
+      }
+      @include breakpoints($xs-bp) {
+        width: 90%;
+        margin: 0 auto 60px auto;
+      }
 
       h1{
         font-weight: 900;
@@ -17,11 +31,41 @@
         line-height: 130%;
         color: $ColorGray900;
         margin: 32px 0;
+
+        @include breakpoints($laptop-bp) {
+          font-size: 40px;
+          text-align: center;
+        }
+        @include breakpoints($tablet-bp) {
+          font-size: 35px;
+        }
+        @include breakpoints($xs-bp) {
+          font-size: 30px;
+        }
       }
     }
     .fashionBlog__other{
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 342px;
       margin: 40px 0;
-      flex: 0 1 auto;
+
+      h1{
+        @include breakpoints($laptop-bp) {
+          text-align: center;
+        }
+      }
+
+      @include breakpoints($laptop-bp) {
+        flex: none;
+        width: 85%;
+        margin: 0 auto;
+      }
+      @include breakpoints($xs-bp) {
+        flex: none;
+        width: 90%;
+        margin: 0 auto;
+      }
 
       .fashionBlog__input{
         position: relative;
@@ -29,6 +73,10 @@
 
         input{
           width: 320px;
+
+          @include breakpoints($laptop-bp) {
+            width: 100%;
+          }
         }
         &::before{
           position: absolute;
