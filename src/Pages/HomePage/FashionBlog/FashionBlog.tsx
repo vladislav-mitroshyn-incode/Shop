@@ -13,8 +13,8 @@ const FashionBlog = () => {
   useEffect(() => {
     getFashionBlogsData()
       .then((response) => {
-        const currentIdBlogs = { firstId: 1, secondId: 2 };
-        setData(response.filter((blog) => blog.id === currentIdBlogs.firstId || blog.id === currentIdBlogs.secondId));
+        const nedeedIds = [1, 2];
+        setData(response.filter((blog) => nedeedIds.includes(blog.id)));
       })
       .catch((error) => {
         console.log(error);
