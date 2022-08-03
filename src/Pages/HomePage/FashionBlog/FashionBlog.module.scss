@@ -87,9 +87,9 @@
         rgba(154, 156, 165, 0.08), 
         0px 4px 4px -4px 
         rgba(30, 33, 44, 0.05);
+        cursor: pointer;
         .blog__body h2{
           color: $ColorPrimary;
-          cursor: pointer;
         }
       }
       .blog__image{
