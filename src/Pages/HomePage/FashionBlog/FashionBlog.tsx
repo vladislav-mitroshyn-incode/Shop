@@ -37,14 +37,12 @@ const FashionBlog = () => {
           </div>
           <div className={styles.fashionBlog__content}>
             {data.map((fashionBlog, index) => (
-              <div key={index} className={styles.fashionBlog__blog}>
+              <NavLink to={`blogs/${fashionBlog.id}`} key={index} className={styles.fashionBlog__blog}>
                 <div className={styles.blog__image}>
                   <img src={fashionBlog.img} alt={fashionBlog.title} />
                 </div>
                 <div className={styles.blog__body}>
-                  <NavLink to={`blogs/${fashionBlog.id}`}>
-                    <h2>{fashionBlog.title}</h2>
-                  </NavLink>
+                  <h2>{fashionBlog.title}</h2>
                   <div className={styles.blog__info}>
                     <span>{fashionBlog.type}</span>
                     <span>{`${fashionBlog.date.month} ${fashionBlog.date.day}, ${fashionBlog.date.year}`}</span>
@@ -52,7 +50,7 @@ const FashionBlog = () => {
                   </div>
                   <p>{fashionBlog.subTitle}</p>
                 </div>
-              </div>
+              </NavLink>
             ))}
           </div>
         </div>
