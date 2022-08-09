@@ -65,11 +65,11 @@
         rgba(30, 33, 44, 0.03);
 
       @include breakpoints($laptop-bp) {
-        width: 85%;
+        width: 90%;
         margin: 0 auto;
       }
       @include breakpoints($xs-bp) {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
       }
       &:first-child{
