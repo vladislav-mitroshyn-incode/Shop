@@ -1,6 +1,7 @@
 @import '../../../constants/colors.scss';
 @import '../../../constants/breakpoints.scss';
 @import '../../../constants/windowWidths.scss';
+@import '../../../constants/mixins.scss';
 
 %firstChildBlogTitle{
   position: relative;
@@ -40,21 +41,6 @@
   color: $ColorGray800;
   font-family: "Lato";
 }
-@mixin blogBodyBreakpoint {
-  flex-direction: column-reverse;
-  width: 80% !important;
-  margin: 0 auto;
-  align-items: center;
-}
-@mixin blogTitleBreakpoint {
-  margin: 10px 0;
-  align-items: center;
-  text-align: center;
-}
-@mixin blogImageBreakpoint {
-  width: 150px;
-}
-
 
 .slider__body{
   position: relative;
@@ -78,15 +64,13 @@
     display: flex !important;
 
     @include breakpoints($xs-bp) {
-      @include blogBodyBreakpoint;
+      @include featuredSliderBodyBreakpoint;
       flex-direction: column;
     }
 
-    .blog__img{
-      img {
-        @include breakpoints($xs-bp) {
-          @include blogImageBreakpoint;
-        }
+    .blog__img img{
+      @include breakpoints($xs-bp) {
+        @include featuredPostsSliderImageBreakpoint;
       }
     }
 
@@ -99,7 +83,7 @@
       @include breakpoints($xs-bp) {
         display: flex;
         flex-direction: column;
-        @include blogTitleBreakpoint;
+        @include featuredSliderTitleBreakpoint;
       }
     }
   }
@@ -107,7 +91,7 @@
     display: flex !important;
 
     @include breakpoints($xs-bp) {
-      @include blogBodyBreakpoint;
+      @include featuredSliderBodyBreakpoint;
     }
 
     .blog__title__reverse{
@@ -122,14 +106,12 @@
         margin: 0 10px 0 0;
       }
       @include breakpoints($xs-bp) {
-        @include blogTitleBreakpoint;
+        @include featuredSliderTitleBreakpoint;
       }
     }
-    .blog__img__reverse{
-      img{
-        @include breakpoints($xs-bp) {
-          @include blogImageBreakpoint;
-        }
+    .blog__img__reverse img{
+      @include breakpoints($xs-bp) {
+        @include featuredPostsSliderImageBreakpoint;
       }
     }
   }
