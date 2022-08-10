@@ -53,7 +53,7 @@ const FashionBlogItemPage = () => {
     <section className={styles.fashionBlogItemPage}>
       <TopPanel prevPage="Fashion Blog" prevPageLink="/blogs" currentPage={data?.title} />
       <div className={styles.fashionBlogItemPage__head}>
-        <ContainerComponent widhtProps={810}>
+        <ContainerComponent className={styles.customContainer} widhtProps={810}>
           <h1>{data?.title}</h1>
           <div className={styles.head__row}>
             <div className={styles.head__info}>
@@ -68,17 +68,19 @@ const FashionBlogItemPage = () => {
         </ContainerComponent>
       </div>
       <div className={styles.fashionBlogItemPage__body}>
-        <ContainerComponent widhtProps={810}>
+        <ContainerComponent className={styles.customContainer} widhtProps={810}>
           <img src={data?.img} alt={data?.title} />
           <h2>
             Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit
             malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod.
           </h2>
           <div className={styles.body__text}>
-            At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras
-            dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque,
-            fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius
-            viverra risus vel.
+            <p>
+              At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam
+              cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra,
+              neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi
+              varius viverra risus vel.
+            </p>
             <p>
               Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl
               massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis
@@ -111,9 +113,11 @@ const FashionBlogItemPage = () => {
           <div className={styles.body__share}>
             <div className={styles.share__tags__list}>
               <h1>Tags:</h1>
-              <div>#trends</div>
-              <div>#inspiration</div>
-              <div>#designers</div>
+              <div className={styles.tags__body}>
+                <div>#trends</div>
+                <div>#inspiration</div>
+                <div>#designers</div>
+              </div>
             </div>
             <div className={styles.share__social}>
               <h1>Share:</h1>
@@ -123,7 +127,7 @@ const FashionBlogItemPage = () => {
         </ContainerComponent>
       </div>
       <div className={styles.fashionBlogItemPage__slider}>
-        <ContainerComponent widhtProps={810}>
+        <ContainerComponent className={styles.customContainer} widhtProps={810}>
           <FeaturedPostsSlider blogs={blogs} />
         </ContainerComponent>
       </div>

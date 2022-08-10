@@ -1,4 +1,5 @@
 import Slider from 'react-slick';
+import { IResponseProp } from '../../../types';
 import styles from './FeaturedPostsSlider.module.scss';
 
 interface IBlogData {
@@ -18,6 +19,7 @@ interface SettingsProp {
   speed: number;
   slidesToShow: number;
   slidesToScroll: number;
+  responsive: IResponseProp[];
 }
 
 const FeaturedPostsSlider: React.FC<IFeaturedPostsSliderProps> = ({ blogs }) => {
@@ -28,6 +30,15 @@ const FeaturedPostsSlider: React.FC<IFeaturedPostsSliderProps> = ({ blogs }) => 
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className={styles.slider__body}>
@@ -39,11 +50,11 @@ const FeaturedPostsSlider: React.FC<IFeaturedPostsSliderProps> = ({ blogs }) => 
                 <p>{`${blog.date.month} ${blog.date.day}, ${blog.date.year}`}</p>
                 <p>{blog.title}</p>
               </div>
-              <div>{blog.img}</div>
+              <div className={styles.blog__img__reverse}>{blog.img}</div>
             </div>
           ) : (
             <div key={index} className={styles.blog__body}>
-              <div>{blog.img}</div>
+              <div className={styles.blog__img}>{blog.img}</div>
               <div className={styles.blog__title}>
                 <p>{`${blog.date.month} ${blog.date.day}, ${blog.date.year}`}</p>
                 <p>{blog.title}</p>
