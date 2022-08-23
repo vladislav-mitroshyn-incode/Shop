@@ -19,6 +19,7 @@ const ShopButton = (props: ShopButtonProps) => {
       type="button"
       className={cn(className, {
         [styles.buttonOutlinedIcon]: typeButton === 'outlined' && icon,
+        [styles.buttonPrimaryIcon]: typeButton === 'primary' && icon,
         [styles.buttonOutlined]: typeButton === 'outlined',
         [styles.buttonPrimary]: typeButton === 'primary',
       })}

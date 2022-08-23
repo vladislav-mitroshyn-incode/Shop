@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Cards.module.scss';
-import womenImg from '../../../assets/card/women.webp';
-import menImg from '../../../assets/card/men.webp';
-import childImg from '../../../assets/card/child.webp';
+import womenImg from '../../../assets/cards/women.webp';
+import menImg from '../../../assets/cards/men.webp';
+import childImg from '../../../assets/cards/child.webp';
 import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const Cards = () => {

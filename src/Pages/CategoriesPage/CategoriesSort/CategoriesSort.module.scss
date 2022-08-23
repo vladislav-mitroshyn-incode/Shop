@@ -1,0 +1,60 @@
+@import '../../../constants/colors.scss';
+
+
+%selectStyles{
+  height: 44px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  color: $ColorGray800;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 0 16px 0 16px;
+  appearance: none;
+  cursor: pointer;
+  &:focus-visible{
+    outline: none;
+  }
+}
+
+.categories__sort{
+  display: flex;
+  margin: 30px 0 0 0;
+
+  h1,
+  h2{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: $ColorGray800;
+    margin: 0 12px 0 0;
+  }
+
+  .sort{
+    display: flex;
+    align-items: center;
+
+    .sort__select{
+      @extend %selectStyles;
+      width: 170px;
+      background: url('../../../assets/select/Line.svg') no-repeat right 16px bottom 50%;
+    }
+  }
+  .show{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 60px;
+
+    .show__select{
+      @extend %selectStyles;
+      width: 80px;
+      background: url('../../../assets/select/Vector.svg') no-repeat right 16px bottom 50%;
+    }
+
+    span{
+      margin: 0 0 0 12px;
+      font-size: 14px;
+      line-height: 150%;
+      color: $ColorGray500;
+    }
+  }
+}

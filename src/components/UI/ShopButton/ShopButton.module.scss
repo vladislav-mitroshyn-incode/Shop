@@ -12,6 +12,10 @@
     position: relative;
     @extend %buttonOutlinedIcon;
 }
+.buttonPrimaryIcon{
+    position: relative;
+    @extend %buttonPrimaryIcon;
+}
 
 .button__icon{
     position: absolute;

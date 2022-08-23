@@ -19,6 +19,13 @@
     color: $ColorWhite;
     background: $ColorPrimary ;
 }
+%buttonPrimaryIcon{
+    @extend %ShopButton;
+    color: $ColorWhite;
+    background: $ColorPrimary ;
+    padding: 15px 40px 15px 72px;
+    
+}
 %buttonOutlinedIcon{
     @extend %ShopButton;
     padding: 15px 40px 15px 72px;
