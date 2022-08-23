@@ -40,23 +40,28 @@
       ]
     },
     "popularCategories":{
-      "caps": [
-        {"id": 1, "title": "Caps", "price": "18.15", "image": "https://www.pngall.com/wp-content/uploads/2016/05/Baseball-Cap-PNG-Clipart.png", "stars": 5}
+      "Caps": [
+        {"id": 1, "title": "Caps", "price": "18.15", "image": "https://www.pngall.com/wp-content/uploads/2016/05/Baseball-Cap-PNG-Clipart.png", "stars": 5},
+        {"id": 2, "title": "Caps", "price": "18.15", "image": "https://www.pngall.com/wp-content/uploads/2016/05/Baseball-Cap-PNG-Clipart.png", "stars": 5}
       ],
-      "sunglasses": [
-        {"id": 1, "title": "Sunglasses", "price": "89.95", "image": "https://m.media-amazon.com/images/I/51LXCoCZgiL._UL1500_.jpg", "stars": 5}
+      "Tops": [
+        {"id": 1, "title": "Tops", "price": "89.95", "image": "https://footballmall.com.ua/image/cache/catalog/products/odezhda/detska/06_06/x,PD0,PB8,PD0,PB7,PD0,PBE,PD0,PB1,PD1,P80,PD0,PB0,PD0,PB6,PD0,PB5,PD0,PBD,PD0,PB8,PD0,PB5_2022-06-06_144104897-300x300.png.pagespeed.ic.BDRL1-yulL.jpg", "stars": 5},
+        {"id": 2, "title": "Tops", "price": "89.95", "image": "https://footballmall.com.ua/image/cache/catalog/products/odezhda/detska/06_06/x,PD0,PB8,PD0,PB7,PD0,PBE,PD0,PB1,PD1,P80,PD0,PB0,PD0,PB6,PD0,PB5,PD0,PBD,PD0,PB8,PD0,PB5_2022-06-06_144104897-300x300.png.pagespeed.ic.BDRL1-yulL.jpg", "stars": 5},
+        {"id": 3, "title": "Tops", "price": "89.95", "image": "https://footballmall.com.ua/image/cache/catalog/products/odezhda/detska/06_06/x,PD0,PB8,PD0,PB7,PD0,PBE,PD0,PB1,PD1,P80,PD0,PB0,PD0,PB6,PD0,PB5,PD0,PBD,PD0,PB8,PD0,PB5_2022-06-06_144104897-300x300.png.pagespeed.ic.BDRL1-yulL.jpg", "stars": 5},
+        {"id": 4, "title": "Tops", "price": "89.95", "image": "https://footballmall.com.ua/image/cache/catalog/products/odezhda/detska/06_06/x,PD0,PB8,PD0,PB7,PD0,PBE,PD0,PB1,PD1,P80,PD0,PB0,PD0,PB6,PD0,PB5,PD0,PBD,PD0,PB8,PD0,PB5_2022-06-06_144104897-300x300.png.pagespeed.ic.BDRL1-yulL.jpg", "stars": null},
+        {"id": 5, "title": "Tops", "price": "89.95", "image": "https://footballmall.com.ua/image/cache/catalog/products/odezhda/detska/06_06/x,PD0,PB8,PD0,PB7,PD0,PBE,PD0,PB1,PD1,P80,PD0,PB0,PD0,PB6,PD0,PB5,PD0,PBD,PD0,PB8,PD0,PB5_2022-06-06_144104897-300x300.png.pagespeed.ic.BDRL1-yulL.jpg", "stars": 4}
       ],
-      "tShirts": [
+      "T-Shirts": [
         {"id": 1, "title": "T-shirts", "price": "20.40", "image": "https://image.spreadshirtmedia.com/image-server/v1/products/T210A1PA3176PT17X30Y43D1009833998S32/views/2,width=650,height=650,appearanceId=1,backgroundColor=ffffff.jpg", "stars": 4}
       ],
-      "jeans": [
-        {"id": 1, "title": "Jeans", "price": "40.00", "image": "https://www.seekpng.com/png/detail/73-737849_denim-jean-transparent-background-jeans.png", "stars": null}
+      "Sandals": [
+        {"id": 1, "title": "Sandals", "price": "40.00", "image": "https://down.imgspng.com/thumb.php?src=https://down.imgspng.com/download/0720/sandals_PNG9694.png&h=300&w=300&zc=1", "stars": null}
       ],
-      "dangles": [
-        {"id": 1, "title": "Dangles", "price": "29.95", "image": "https://www.seekpng.com/png/detail/127-1271247_the-sphere-collection-diamond-dangling-earrings-feature-drops.png", "stars": 5}
+      "Jackets": [
+        {"id": 1, "title": "Jackets", "price": "29.95", "image": "https://static.wikia.nocookie.net/battlegrounds_gamepedia_en/images/3/3e/Icon_equipment_VK_Jacket.png/revision/latest/scale-to-width-down/300?cb=20180708161926", "stars": 5}
       ],
-      "shoes": [
-        {"id": 1, "title": "Shoes", "price": "30.60", "image": "https://www.seekpng.com/png/detail/363-3630417_pink-child-shoes-transparent-baby-shoes-png.png", "stars": null}
+      "Coats": [
+        {"id": 1, "title": "Coats", "price": "30.60", "image": "https://www.seekpng.com/png/small/251-2518332_ladies-jacket-png-picture-jacket-for-women-png.png", "stars": null}
       ]
     },
     "trandingNow":[
