@@ -9,8 +9,7 @@
   @include breakpoints($laptop-bp) {
     margin: 0 0 50px 0px;
   }
-  .newArrivals__card{
-    .newArrivals__content{
+    .newArrivals__content{  
       margin: 0 15px 0 15px;
 
       @include breakpoints($tablet-bp) {
@@ -52,7 +51,6 @@
         }
       }
     }
-  }
   .my__dots {
     display: flex !important;
     gap: 12px;
