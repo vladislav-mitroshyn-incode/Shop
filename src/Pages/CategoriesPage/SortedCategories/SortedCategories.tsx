@@ -1,19 +1,19 @@
 import React from 'react';
-import styles from './CategoriesSort.module.scss';
+import styles from './SortedCategories.module.scss';
 
-const CategoriesSort: React.FC = () => {
+const SortedCategories: React.FC = () => {
   return (
-    <section className={styles.categories__sort}>
-      <div className={styles.sort}>
+    <section className={styles.sorted__categories}>
+      <div className={styles.sorted}>
         <h1>Sort by</h1>
-        <select className={styles.sort__select}>
+        <select className={styles.sorted__select}>
           <option value="popularity">popularity</option>
           <option value="price">price</option>
         </select>
       </div>
-      <div className={styles.show}>
+      <div className={styles.showed}>
         <h2>Show</h2>
-        <select className={styles.show__select}>
+        <select className={styles.showed__select}>
           <option value="12">12</option>
           <option value="16">16</option>
         </select>
@@ -23,4 +23,4 @@ const CategoriesSort: React.FC = () => {
   );
 };
 
-export default CategoriesSort;
+export default SortedCategories;

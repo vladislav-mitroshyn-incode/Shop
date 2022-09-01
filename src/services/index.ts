@@ -16,9 +16,9 @@ export const getTrandingNowData = async () => {
   return response;
 };
 
-export const getPopularCategorieItemData = async (currentCategori: string) => {
+export const getPopularCategoryItemData = async (currentCategoryi: string) => {
   const response: IAllCategoriesData = await ApiService.get(categoriesUtl);
-  const currentData: ICategoriesData[] = response[currentCategori as keyof typeof response];
+  const currentData: ICategoriesData[] = response[currentCategoryi as keyof typeof response];
   return currentData;
 };
 

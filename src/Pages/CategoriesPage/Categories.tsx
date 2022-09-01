@@ -1,24 +1,24 @@
 import React, { FC, useEffect, useState } from 'react';
 import Card from '../../components/UI/Card/Card';
-import styles from './CategoriesPage.module.scss';
+import styles from './Categories.module.scss';
 import ContainerComponent from '../../components/UI/ContainerComponent/ContainerComponent';
-import { getPopularCategorieItemData } from '../../services';
+import { getPopularCategoryItemData } from '../../services';
 import { ICategoriesData } from '../../types';
-import CategoriesSort from './CategoriesSort/CategoriesSort';
+import SortedCategories from './SortedCategories/SortedCategories';
 import { ReactComponent as filterImage } from '../../assets/categories-page/filter.svg';
 import ShopButton from '../../components/UI/ShopButton/ShopButton';
 import Filters from './Filters/Filters';
 import TopPanel from '../../components/UI/TopPanel/TopPanel';
 
-const CategoriesPage: FC = () => {
+const Categories: FC = () => {
   const [data, setData] = useState<ICategoriesData[]>([]);
-  const [currentCategoriName, setCurrentCategoriName] = useState('');
+  const [currentCategoryName, setCurrentCategoryName] = useState('');
 
   useEffect(() => {
-    const currentCategori = localStorage.getItem('currentCategori');
-    if (currentCategori) {
-      setCurrentCategoriName(currentCategori);
-      getPopularCategorieItemData(currentCategori)
+    const currentCategory = localStorage.getItem('currentCategory');
+    if (currentCategory) {
+      setCurrentCategoryName(currentCategory);
+      getPopularCategoryItemData(currentCategory)
         .then((response) => setData(response))
         .catch((error: string) => {
           console.log(error);
@@ -28,7 +28,7 @@ const CategoriesPage: FC = () => {
 
   return (
     <section className={styles.categories}>
-      <TopPanel currentPage={currentCategoriName} />
+      <TopPanel currentPage={currentCategoryName} />
       <ContainerComponent>
         <div className={styles.categories__content}>
           <div className={styles.categories__sidebar}>
@@ -38,7 +38,7 @@ const CategoriesPage: FC = () => {
             <Filters />
           </div>
           <div className={styles.categories__products}>
-            <CategoriesSort />
+            <SortedCategories />
             <div className={styles.products__list}>
               {data.map((card, index) => (
                 <Card key={index} className={styles.products__item} cardData={card} />
@@ -51,4 +51,4 @@ const CategoriesPage: FC = () => {
   );
 };
 
-export default CategoriesPage;
+export default Categories;
