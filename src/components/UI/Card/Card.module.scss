@@ -12,6 +12,7 @@
     content: url('../../../assets/card/heartСircle.svg');
     position: absolute;
     bottom: 16px;
+    right: 16px;
   }
   img {
     width: 100%;
@@ -45,8 +46,8 @@ div {
       @extend %cardImageStyles;
     }
 
-    .stars {
-      .star {
+    .card__stars {
+      .card__star {
         position: absolute;
         right: 16px;
         top: 16px;
@@ -76,8 +77,8 @@ div {
         }
       }
 
-      .star,
-      .star:before {
+      .card__star,
+      .card__star:before {
         -webkit-clip-path: polygon(
           50% 0%,
           66% 27%,
