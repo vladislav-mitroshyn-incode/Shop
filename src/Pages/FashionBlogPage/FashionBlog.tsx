@@ -2,13 +2,13 @@ import React from 'react';
 import ContainerComponent from '../../components/UI/ContainerComponent/ContainerComponent';
 import FashionBlogItem from './FashionBlogItem/FashionBlogItem';
 import TopPanel from '../../components/UI/TopPanel/TopPanel';
-import styles from './FashionBlogPage.module.scss';
+import styles from './FashionBlog.module.scss';
 import ShopInput from '../../components/UI/ShopInput/ShopInput';
 import CategoriesBlog from './CategoriesBlog/CategoriesBlog';
 import FeaturedPosts from './FeaturedPosts/FeaturedPosts';
 import Tags from './Tags/Tags';
 
-const FashionBlogPage = () => {
+const FashionBlog = () => {
   return (
     <section className={styles.fashionBlog}>
       <TopPanel currentPage="Fashion blog" />
@@ -32,4 +32,4 @@ const FashionBlogPage = () => {
   );
 };
 
-export default FashionBlogPage;
+export default FashionBlog;

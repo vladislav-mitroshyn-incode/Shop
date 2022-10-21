@@ -16,6 +16,15 @@ export interface ICategoriesData {
   stars: number | null;
 }
 
+export interface IAllCategoriesData {
+  caps: ICategoriesData[];
+  tops: ICategoriesData[];
+  tShirts: ICategoriesData[];
+  sandals: ICategoriesData[];
+  jackets: ICategoriesData[];
+  coats: ICategoriesData[];
+}
+
 export type IPopularCategoriesData1 = 'caps' | 'dangles' | 'jeans' | 'shoes' | 'sunglasses' | 'tShirt';
 
 export interface IFashionBlogData {

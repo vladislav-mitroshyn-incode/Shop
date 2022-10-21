@@ -9,7 +9,7 @@ import PopularCategories from './PopularCategories/PopularCategories';
 import SectionSlider from './SectionSlider/SectionSlider';
 import TrandingNow from './TrandingNow/TrandingNow';
 
-const HomePage = () => {
+const Home = () => {
   return (
     <>
       <SectionSlider />
@@ -25,4 +25,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

@@ -1,9 +1,11 @@
+import Categories from '../Pages/CategoriesPage/Categories';
 import FashionBlogItemPage from '../Pages/FashionBlogPage/FashionBlogItemPage/FashionBlogItemPage';
-import FashionBlogPage from '../Pages/FashionBlogPage/FashionBlogPage';
-import HomePage from '../Pages/HomePage/HomePage';
+import FashionBlog from '../Pages/FashionBlogPage/FashionBlog';
+import Home from '../Pages/HomePage/Home';
 
 export const routes = [
-  { path: '/', component: <HomePage /> },
-  { path: '/blogs', component: <FashionBlogPage /> },
+  { path: '/', component: <Home /> },
+  { path: '/blogs', component: <FashionBlog /> },
   { path: '/blogs/:id', component: <FashionBlogItemPage /> },
+  { path: '/category/:name', component: <Categories /> },
 ];

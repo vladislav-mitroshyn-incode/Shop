@@ -6,12 +6,12 @@ import Caps from '../../../assets/categories/image2.png';
 import Sandals from '../../../assets/categories/image3.png';
 import Jackets from '../../../assets/categories/image4.png';
 import Coats from '../../../assets/categories/image5.png';
-import PopularCategoriItem from '../PopularCategoriItem/PopularCategoriItem';
+import PopularCategoryItem from '../PopularCategoryItem/PopularCategoryItem';
 import ContainerComponent from '../../../components/UI/ContainerComponent/ContainerComponent';
 
 const categories = [
   { img: <img src={Tops} alt="Tops" />, name: 'Tops' },
-  { img: <img src={tShirts} alt="T-shirts" />, name: 'T-shirts' },
+  { img: <img src={tShirts} alt="T-shirts" />, name: 'T-Shirts' },
   { img: <img src={Caps} alt="Caps" />, name: 'Caps' },
   { img: <img src={Sandals} alt="Sandals" />, name: 'Sandals' },
   { img: <img src={Jackets} alt="Jackets" />, name: 'Jackets' },
@@ -24,7 +24,7 @@ const PopularCategories: FC = () => {
       <ContainerComponent>
         <div className={styles.popularCategories__body}>
           <h1>Popular categories</h1>
-          <PopularCategoriItem categories={categories} />
+          <PopularCategoryItem categories={categories} />
         </div>
       </ContainerComponent>
     </section>

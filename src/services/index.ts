@@ -1,14 +1,9 @@
 import { productsUtl, trandingsUtl, categoriesUtl, fashionBlogsUtl } from '../assets/urls';
-import { IArrivalData, ITrandingData, ICategoriesData, IPopularCategoriesData1, IFashionBlogData } from '../types';
+import { IArrivalData, ITrandingData, IFashionBlogData, IAllCategoriesData, ICategoriesData } from '../types';
 
 export const getNewArrivalsData = async () => {
   const { newArrivals }: { newArrivals: IArrivalData[] } = await ApiService.get(productsUtl);
   return { newArrivals };
-};
-
-export const getPopularCategoriesData = async () => {
-  const response: Record<IPopularCategoriesData1, ICategoriesData[]> = await ApiService.get(categoriesUtl);
-  return response;
 };
 
 export const getFashionBlogsData = async () => {
@@ -19,6 +14,12 @@ export const getFashionBlogsData = async () => {
 export const getTrandingNowData = async () => {
   const response: ITrandingData[] = await ApiService.get(trandingsUtl);
   return response;
+};
+
+export const getPopularCategoryItemData = async (currentCategoryi: string) => {
+  const response: IAllCategoriesData = await ApiService.get(categoriesUtl);
+  const currentData: ICategoriesData[] = response[currentCategoryi as keyof typeof response];
+  return currentData;
 };
 
 export default class ApiService {
